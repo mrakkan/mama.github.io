@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive CSS</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 16px;
+      }
+
+      nav {
+        font-size: 14px;
+      }
+
+      main {
+        font-size: 12px;
+      }
+
+      footer {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive CSS</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <p>This is the main content of the page.</p>
+  </main>
+
+  <footer>
+    <p>Copyright 2023 Responsive CSS</p>
+  </footer>
+</body>
+</html>

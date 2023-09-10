@@ -1,0 +1,43 @@
+@font-face{
+    font-family: odu;
+    src: url(Oduda-Bold-Demo.otf);
+}
+@font-face{
+    font-family: ania;
+    src: url(anianiefont.ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(Culonite-Bold-1.otf);
+}
+#backcolor{
+    background-color: rgba(245, 199, 205, 0.979);
+}
+#Emae{
+    text-align: center;
+    font-size: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: odu;
+    color: rgb(110, 44, 185);
+}
+#descrip{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#txt{
+    text-align: center;
+    font-size: larger;
+}
+#butt{
+    background-color:white;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    max-height: 60px;
+    max-width: 100px;
+    border-radius: 10vh;
+}
