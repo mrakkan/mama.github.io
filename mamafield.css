@@ -39,9 +39,8 @@ h2{
     text-align: center;
     font-size: 100%;
     background-color: white;
-    width: 30%;
+    width: 20%;
     border-radius: 10vh;
     cursor: pointer;
-}
-#button{
+    border: none;
 }
