@@ -12,6 +12,13 @@
 }
 body{
     background-color: rgba(245, 199, 205, 0.979);
+    margin: auto;
+    padding: auto;
+}
+.uppername{
+    align-content: absolute;
+    margin: auto;
+
 }
 h1{
     text-align: center;
@@ -28,16 +35,15 @@ h2{
     margin-top: 0px;
 }
 .container{
-    margin: auto;
-    align-content: center;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
-    font-size: 50px;
+    font-size: 100%;
     background-color: white;
-    max-width: 100px;
+    width: 30%;
     border-radius: 10vh;
     cursor: pointer;
 }
-.new{
-    background-color: aliceblue;
+#button{
+    margin-left: 50%;
+    margin-right: 50%;
 }
