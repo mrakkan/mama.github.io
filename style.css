@@ -2,13 +2,17 @@ body {
     font-family: sans-serif;
     margin: 0;
     position: relative;
+    background-image: url("8877892 (1).jpg");
+    background-size: cover;
   }
   
   .container {
+    background-color: pink;
     width: 500px;
-    margin: 0 auto;
-    position: absolute;
     top: 30vh;
+    margin: 0 auto;
+    border-radius: 6px;
+    opacity: 50%;
   }
   
   h1 {

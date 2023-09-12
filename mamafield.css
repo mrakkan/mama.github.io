@@ -11,28 +11,28 @@
     src: url(Culonite-Bold-1.otf);
 }
 body{
-    background-color: rgba(245, 199, 205, 0.979);
+    background-color: rgb(253, 187, 223);
     margin: auto;
     padding: auto;
+    overflow: hidden;
+    background-image: url("8877892 (1).jpg");
+    background-size: cover;
 }
 .uppername{
     align-content: absolute;
-    margin: auto;
-
+    margin-top: 10vh;
 }
 h1{
     text-align: center;
-    font-size: 150px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-size: 20vh;
+    margin: auto;
     font-family: odu;
     color: rgb(110, 44, 185);
 }
 h2{
     text-align: center;
     font-size: 40px;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    margin-bottom: 10vh;
 }
 .container{
     padding: 30px;
@@ -43,4 +43,8 @@ h2{
     border-radius: 10vh;
     cursor: pointer;
     border: none;
+}
+img{
+    position: absolute;
+    overflow: hidden;
 }
