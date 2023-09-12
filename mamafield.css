@@ -21,6 +21,20 @@ body{
 .uppername{
     align-content: absolute;
     margin-top: 10vh;
+
+}
+.text{
+    animation-duration: 1.5s;
+    animation-name: comefromtop;
+}
+
+@keyframes comefromtop {
+    from{
+        margin-top: -50%;
+    }
+    to{
+        margin-top: 0%;
+    }
 }
 h1{
     text-align: center;
@@ -43,8 +57,10 @@ h2{
     border-radius: 10vh;
     cursor: pointer;
     border: none;
+    overflow: hidden;
 }
 img{
     position: absolute;
     overflow: hidden;
+    height: 50%;
 }
