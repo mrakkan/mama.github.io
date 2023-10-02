@@ -4,16 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap tp/css/bootstrap.min.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Login</h1>
-    <form action="/login" method="post">
-      <input type="text" name="username" placeholder="Username">
-      <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="Login">
-    </form>
-  </div>
+  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <style>
+    body{
+        background-image: url("8877892 (1).jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    main{
+      background-color: rgb(255, 255, 255, .5);
+      border-radius: 4vh;
+      width: 40%;
+      margin: auto;
+      min-width: 300px;
+      box-shadow: 0px 0px 20px 20px rgb(255, 255, 255, .5);
+      transform: translate(0, 5%);
+      backdrop-filter: blur(5px);
+    }
+    .h3{
+      text-align: center;
+      font-size: 10vh;
+      padding-bottom: 5vh;
+      
+    }
+    
+    .btn{
+      margin: auto;
+      background-color: brown;
+      border-color: brown;
+      border-radius: 1vh;
+      min-width: 20%;
+      display: flex;
+    }
+    .signuplink{
+      font-size: 4vh;
+      color: black;
+    }
+    </style>
+<main class="form-signin m-xl-5 p-5">
+  <form>
+    <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+    <label id="floatingInput">Username</label>
+    <div class="form-floating">
+      <input type="email" class="form-control py-0" id="floatingemail" placeholder="">
+    </div>
+    <br>
+    <label id="floatingInput">Password</label>
+    <div class="form-floating">
+      <input type="password" class="form-control py-0" id="floatingPassword" placeholder="">
+    </div>
+
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
+      </label>
+    </div>
+    <button class="btn btn-primary py-2" type="submit">Done</button>
+  </form>
+  <br>
+  <a href="url" class="signuplink">Sign up</a>
+</main>
+<script src="script.js">
+</script>
+
 </body>
 </html>
