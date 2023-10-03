@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
+</head>
+  <body class="d-flex align-items-center justify-items-center bg-body-tertiary">
+    <style>
+    body{
+        background-image: url("../static/8877892\ \(1\).jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+    main{
+      background-color: rgb(255, 255, 255, .5);
+      border-radius: 3vh;
+      width: 40%;
+      margin: auto;
+      min-width: 300px;
+      box-shadow: 0px 0px 20px 20px rgb(255, 255, 255, .5);
+      transform: translate(0, 20%);
+    }
+    .h3{
+      text-align: center;
+      font-size: 10vh;
+    }
+    
+    .btn{
+      margin: auto;
+      background-color: #3A305A;
+      border-color: #3A305A;
+      border-radius: 1vh;
+      min-width: 20%;
+      display: flex;
+      justify-content: center;
+      
+    }
+    .signuplink{
+      font-size: 4vh;
+      color: black;
+    }
+    .form-control{
+      border-radius: 2vh;
+      background-color: #3A305A26;
+      border: none;
+    }
+    #floatingInput{
+      font-weight: bold;
+      font-size: larger;
+    }
+    </style>
+<main class="form-signin p-5">
+  <form>
+    <h1 class="h3 fw-5">Sign up</h1>
+    <label id="floatingInput">Username</label>
+    <div class="form-floating">
+      <input type="email" class="form-control py-0" id="floatingemail" placeholder="">
+    </div>
+    <br>
+    <label id="floatingInput">Password</label>
+    <div class="form-floating">
+      <input type="password" class="form-control py-0" id="floatingPassword" placeholder="">
+    </div>
+    <br>
+    <button class="btn btn-primary py-2 fs-5" type="submit">Done</button>
+  </form>
+  <br>
+  <a href="/login" class="loginlink">Sign in</a>
+</main>
+<script src="script.js">
+</script>
+
+</body>
+</html>
