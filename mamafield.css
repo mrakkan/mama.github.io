@@ -13,7 +13,6 @@
 body{
     margin: auto;
     padding: auto;
-    overflow: hidden;
     background-image: url("ดีไซน์ที่ยังไม่ได้ตั้งชื่อ (2).png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,6 +24,7 @@ body{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    z-index: 1;
 
 }
 #text{
@@ -103,4 +103,12 @@ h2{
     position: absolute;
     width: 110vh;
 
+}
+#document{
+    display: flex;
+    transform: rotate(-14.587deg);
+    width: 300px;
+    overflow: hidden;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    z-index: 3;
 }

@@ -9,7 +9,7 @@
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <style>
     body{
-        background-image: url("8877892 (1).jpg");
+        background-image: url("signin.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -23,32 +23,45 @@
       min-width: 300px;
       box-shadow: 0px 0px 20px 20px rgb(255, 255, 255, .5);
       transform: translate(0, 5%);
-      backdrop-filter: blur(5px);
     }
     .h3{
       text-align: center;
       font-size: 10vh;
-      padding-bottom: 5vh;
       
     }
     
     .btn{
       margin: auto;
-      background-color: brown;
-      border-color: brown;
+      background-color: #3A305A;
+      border-color: #3A305A;
       border-radius: 1vh;
       min-width: 20%;
       display: flex;
+      justify-content: center;
+      
     }
     .signuplink{
       font-size: 4vh;
       color: black;
     }
+    .form-control{
+      border-radius: 2vh;
+      background-color: #3A305A26;
+      border: none;
+    }
+    .btn:hover{
+      background-color: rgb(160, 92, 29);
+      border-color: rgb(160, 92, 29);
+    }
+    #floatingInput{
+      font-weight: bold;
+      font-size: larger;
+    }
     </style>
 <main class="form-signin m-xl-5 p-5">
   <form>
-    <h1 class="h3 mb-3 fw-normal">Sign in</h1>
-    <label id="floatingInput">Username</label>
+    <h1 class="h3 mb-3 fw-5">Sign in</h1>
+    <label id="floatingInput" class="username">Username</label>
     <div class="form-floating">
       <input type="email" class="form-control py-0" id="floatingemail" placeholder="">
     </div>
@@ -57,17 +70,11 @@
     <div class="form-floating">
       <input type="password" class="form-control py-0" id="floatingPassword" placeholder="">
     </div>
-
-    <div class="form-check text-start my-3">
-      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
-    </div>
-    <button class="btn btn-primary py-2" type="submit">Done</button>
+    <br>
+    <button class="btn btn-primary py-2 fs-5" type="submit">Done</button>
   </form>
   <br>
-  <a href="url" class="signuplink">Sign up</a>
+  <a href="signup.html" class="signuplink">Sign up</a>
 </main>
 <script src="script.js">
 </script>
