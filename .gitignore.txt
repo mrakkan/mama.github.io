@@ -1,2 +1,0 @@
-.vscode
-flask_tim/website/__pycache__
