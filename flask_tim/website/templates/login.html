@@ -9,7 +9,7 @@
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <style>
     body{
-        background-image: url("../static/signin.png");
+        background-image: url("../static/login_withmama.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -63,16 +63,36 @@
   <form method="POST">
     <!---->
 
-    <h1 class="h3 mb-3 fw-5">Sign in</h1>
+    <h1 class="h3 mb-3 fw-5">Log in</h1>
     <label id="floatingInput" class="username">Username</label>
     <div class="form-floating">
-      <input type="email" class="form-control py-0" id="floatingemail" placeholder="">
-    </div>
+    <!---->
+    <input type="email" class="form-control py-0" id="floatingemail" placeholder="" name="email">
+    <!---->
+  </div>
+
+    <!---->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+      {% if category == 'error' %}
+        {{ message }}
+      {% else %}
+        {{ message }}
+      {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <!---->
+
+
     <br>
     <label id="floatingInput">Password</label>
     <div class="form-floating">
-      <input type="password" class="form-control py-0" id="floatingPassword" placeholder="">
-    </div>
+    <!---->
+    <input type="password" class="form-control py-0" id="floatingPassword" placeholder="" name="password">
+    <!---->
+  </div>
     <br>
     <button class="btn btn-primary py-2 fs-5" type="submit">Done</button>
   </form>
