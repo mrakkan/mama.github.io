@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap tp/css/bootstrap.min.css">
+</head>
+<body class="d-flex ">
+    <style>
+        body{
+            background: #FFF6EC;
+            padding: 3vh;
+            height: 1000vh;
+            flex-direction: column;
+        }
+        .task{
+        height: 60rem;
+        margin-left: 10rem;
+        width: 100vh;
+        }
+        .navicon{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+        }
+        .navlist{
+            width: 8rem;
+            height: 95%;
+            background-color: #FDD;
+            border-radius: 3rem;
+            padding: 3rem;
+            margin-right: 4rem;
+            position: fixed;
+        }
+        .icon{
+            margin: 8vh;
+            width: 5vh;
+            cursor: pointer;
+        }
+        .icon:hover{
+            transition: 0.5s;
+            scale: 1.5;
+        }
+        .box1{
+            background-color: rgb(255, 255, 255);
+            height: 40%;
+            margin-bottom: 5vh;
+            border-radius: 3rem;
+            text-align: start;
+            font-size: 5rem;
+    
+        }
+
+        .box-2-1{
+            background-color: #fff;
+            border-radius: 3rem;
+            margin-right: 3vh;
+            height: 100%;
+        }
+        .box-3-1{
+            background-color: #fff;
+            border-radius: 3rem;
+ 
+            margin-right: 3vh;
+        }
+        .box-4-1{
+            background-color: #fff;
+            border-radius: 3rem;
+
+        }
+        .column3{
+            margin-bottom: 3vh;
+            height: 100%;
+        }
+        .box-5-1{
+            background: #fff;
+            border-radius: 3rem;
+        }
+        .row1{
+            margin-right: 3vh;
+            height: 100%;
+        }
+        .row2{
+            width: 40vh;
+        }
+        .box-7-1{
+            background-color: #fff;
+            border-radius: 3rem;
+            height: 100%;
+        }
+        .box-6-1{
+            margin-bottom: 3vh;
+            height: 100%;
+        }
+        .column2{
+            width: 70%;
+        }
+        #box{
+            cursor: pointer;
+        }
+        #box:hover{
+            scale: 1.05;  
+            transition: 0.5s;
+            
+        }
+        .column4{
+            width: 50%;
+        }
+        @media (max-width: 1500px){
+            body{
+                flex-direction: column;
+                flex: 100%;
+                
+            }
+            .navicon{
+                flex-direction: row;
+            }
+            .navlist{
+                width: 95%;
+                height: 15vh;
+                margin-right: 0;
+                padding: 3vh;
+                bottom: 0%;
+            }
+            .icon{
+                margin: 0.5vh;
+                width: 7vh;
+            
+            }
+            .blank{
+                width: 100%;
+                height: 15vh;
+            }
+            .task{
+                height: 100vh;
+                margin-left: 0;
+                margin-bottom: 15vh;
+            }
+            .row2{
+                flex-direction: column;
+                flex: 100%;
+                flex-wrap: wrap;
+            }
+            .row1{
+                margin-right: 0;
+                height: 30%;
+            }
+            .column2{
+                flex-direction: column;
+                flex: 100%;
+                flex-wrap: wrap;
+            }
+            .box1{
+                height: 20vh;
+            }
+            .box-2-1{
+                width: 100%;
+                height: 30%;
+                margin-right: 0;
+                margin-bottom: 3vh;
+            }
+            .column4{
+                width: 100%;
+            }
+            .boxpage2-1{
+            background-color: #fff;
+        }
+        .box-6-1{
+            height: 25%;
+        }
+        .box-7-1{
+            height: 25%;
+        }
+        .column3{
+            height: 50%;
+        }
+        .column4{
+            height: 50%;
+        }
+    }
+    </style>
+      
+    <div class="navlist">
+        <ul class="navicon m-0 p-0 justify-content-center">
+            <li><img src="icon_home.png" class="icon"></li>
+            <li><img src="icon_reminder.png" class="icon"></li>
+            <li><img src="icon_finance.png" class="icon"></li>
+            <li><img src="icon_exit.png"class="icon"></li>
+        </ul>
+    </div>
+</div>
+
+        <section class="task d-flex flex-column  w-100">
+               <div class="box1  " id="box">YO MY KIDS</div>
+           <div class="row2 d-flex flex-row w-100 h-100">
+                <div class="column2 d-flex flex-row w-100 h-100">
+                    <div class="box-2-1 w-100" id="box"></div>
+                    <div class="row1 d-flex flex-column w-100 ">
+                        <div class="column3 d-flex flex-row w-100">
+                            <div class="box-3-1 w-100 h-100 " id="box"></div>
+                            <div class="box-4-1 w-100 h-100" id="box"></div>
+                        </div>
+                        <div class="box-5-1 w-100 h-100" id="box"></div>
+                    </div>
+                    <div class="column4 d-flex flex-column  h-100">
+                        <div class="box-6-1 w-100  " id="box"></div>
+                        <div class="box-7-1 w-100 " id="box"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="task d-flex flex-column  w-100">
+            <div class="box1  " id="box">YO MY KIDS</div>
+        <div class="row2 d-flex flex-row w-100 h-100">
+             <div class="column2 d-flex flex-row w-100 h-100">
+                 <div class="box-2-1 w-100" id="box"></div>
+                 <div class="row1 d-flex flex-column w-100 ">
+                     <div class="column3 d-flex flex-row w-100">
+                         <div class="box-3-1 w-100 h-100 " id="box"></div>
+                         <div class="box-4-1 w-100 h-100" id="box"></div>
+                     </div>
+                     <div class="box-5-1 w-100 h-100" id="box"></div>
+                 </div>
+                 <div class="column4 d-flex flex-column  h-100">
+                     <div class="box-6-1 w-100  " id="box"></div>
+                     <div class="box-7-1 w-100 " id="box"></div>
+                 </div>
+             </div>
+
+         </div>
+     </section>
+
+</body>
+</html>
