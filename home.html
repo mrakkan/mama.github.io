@@ -10,6 +10,7 @@
     <style>
         *{
         font-family: 'Oduda';
+        color: #3A305A;
         }
         body{
             background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
@@ -29,7 +30,6 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-
         }
         .navlist{
             width: 8rem;
@@ -39,12 +39,14 @@
             padding: 3rem;
             margin-right: 4rem;
             position: fixed;
+            z-index: 1;
         }
         .icon{
             margin: 8vh;
             width: 5vh;
             cursor: pointer;
             transition: 0.3s ease;
+            
         }
         .icon:hover {
         transform: scale(1.2);
@@ -126,11 +128,14 @@
         }
         .mamahome{
             position: absolute;
-            width: 55vh;
+            width: 20%;
             height: auto;
             bottom: 0;
             right: 0;
             z-index: 1;
+        }
+        .mamafloat{
+            position: relative;
         }
         @media (max-width: 1500px){
             body{
@@ -203,7 +208,7 @@
         }
     }
     </style>
-    <img src="img/mama_home.png" alt="mama_home" class="mamahome">
+    
     <div class="navlist">
         <ul class="navicon m-0 p-0 justify-content-center">
             <li><img src="img/icon_home1.png" class="icon" id="icon1"></li>
@@ -212,7 +217,8 @@
             <li><img src="img/icon_exit1.png"class="icon" id="icon4"></li>
         </ul>
     </div>
-    
+    <div class="mamafloat">
+        <img src="img/mama_home.png" alt="mama_home" class="mamahome">
         <section class="task d-flex flex-column">
             <div class="box1" id="box">YO MY KIDS</div>
             <div class="row2 d-flex flex-row w-100 h-100">
@@ -230,5 +236,6 @@
                 </div>
             </div>
         </section>
+    </div>
 </body>
 </html>
