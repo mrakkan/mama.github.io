@@ -12,4 +12,4 @@ def mama():
 @views.route('/home')
 @login_required
 def home():
-    return '<h>home</h>' 
+    return render_template('home.html') 

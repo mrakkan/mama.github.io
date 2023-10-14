@@ -6,10 +6,18 @@
   <title>Login Page</title>
   <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
 </head>
-  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+  <body>
     <style>
+        @font-face {
+            font-family: 'Oduda';
+            src: url(../static/Oduda-Bold-Demo.otf);
+        }
+        *{
+        font-family: 'Oduda';
+        color: #3A305A;
+        }
     body{
-        background-image: url("../static/login_withmama.png");
+        background-image: url("../static/bg_login_m.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -43,6 +51,7 @@
     .signuplink{
       font-size: 4vh;
       color: black;
+      text-decoration: none;
     }
     .form-control{
       border-radius: 2vh;
@@ -57,21 +66,20 @@
       font-weight: bold;
       font-size: larger;
     }
+    @media  (max-width: 1500px){
+      .h3{
+        font-size: 7vh;
+      }
+    }
     </style>
 <main class="form-signin m-xl-5 p-5">
-    <!---->
-  <form method="POST">
-    <!---->
-
+  <form class="" method="POST">
     <h1 class="h3 mb-3 fw-5">Log in</h1>
     <label id="floatingInput" class="username">Username</label>
     <div class="form-floating">
-    <!---->
-    <input type="email" class="form-control py-0" id="floatingemail" placeholder="" name="email">
-    <!---->
-  </div>
+      <input type="email" class="form-control py-0" id="floatingemail" placeholder="" name="email">
+    </div>
 
-    <!---->
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       {% for category, message in messages %}
@@ -83,23 +91,19 @@
       {% endfor %}
     {% endif %}
     {% endwith %}
-    <!---->
-
 
     <br>
     <label id="floatingInput">Password</label>
     <div class="form-floating">
-    <!---->
-    <input type="password" class="form-control py-0" id="floatingPassword" placeholder="" name="password">
-    <!---->
-  </div>
+      <input type="password" class="form-control py-0" id="floatingPassword" placeholder="" name="password">
+    </div>
     <br>
     <button class="btn btn-primary py-2 fs-5" type="submit">Done</button>
   </form>
   <br>
   <a href="/sign-up" class="signuplink">Sign up</a>
 </main>
-<script src="script.js">
+<script src="../static/script.js">
 </script>
 
 </body>

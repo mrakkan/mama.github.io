@@ -74,7 +74,8 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
 
-            login_user(user_email_check, remember=True) # remember=False ไม่ต้องจำก็ได้
+            # login_user(user_email_check, remember=True) # remember=False ไม่ต้องจำก็ได้
+            login_user(new_user, remember=True)
             # login_user(user_email_check, remember=False)
 
 
