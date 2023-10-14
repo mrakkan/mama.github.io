@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../bootstrap tp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap tp/css/bootstrap.min.css">
 </head>
-<body class="d-flex ">
+<body class="d-flex">
     <style>
+        *{
+        font-family: 'Oduda';
+        }
         body{
-            background: #FFF6EC;
+            background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
+            background-attachment: fixed;
             padding: 3vh;
-            height: 1000vh;
             flex-direction: column;
+            height: 1000vh;
         }
         .task{
-        height: 60rem;
-        margin-left: 10rem;
-        width: 100vh;
+            height: 64rem;
+            padding-left: 10rem;
+            width: 100%;
         }
         .navicon{
             list-style: none;
@@ -40,23 +44,40 @@
             margin: 8vh;
             width: 5vh;
             cursor: pointer;
+            transition: 0.3s ease;
         }
-        .icon:hover{
-            transition: 0.5s;
-            scale: 1.5;
+        .icon:hover {
+        transform: scale(1.2);
+        }
+        #icon1:hover{
+            content: url(img/icon_home.png);
+        }
+
+        #icon2:hover{
+            content: url(img/icon_reminder.png);
+        }
+
+        #icon3:hover{
+            content: url(img/icon_finance.png);
+        }
+
+        #icon4:hover{
+            content: url(img/icon_exit.png);
         }
         .box1{
-            background-color: rgb(255, 255, 255);
+            background-color: #fff;
             height: 40%;
-            margin-bottom: 5vh;
+            margin-bottom: 3vh;
             border-radius: 3rem;
             text-align: start;
             font-size: 5rem;
-    
+            width: 100%;
+            padding: 2vh;
         }
 
         .box-2-1{
             background-color: #fff;
+            width: 100vh;
             border-radius: 3rem;
             margin-right: 3vh;
             height: 100%;
@@ -64,7 +85,6 @@
         .box-3-1{
             background-color: #fff;
             border-radius: 3rem;
- 
             margin-right: 3vh;
         }
         .box-4-1{
@@ -77,8 +97,11 @@
             height: 100%;
         }
         .box-5-1{
-            background: #fff;
+            background-color: #fff;
             border-radius: 3rem;
+            text-align: start;
+            font-size: 3rem;
+            padding: 2vh;
         }
         .row1{
             margin-right: 3vh;
@@ -87,57 +110,53 @@
         .row2{
             width: 40vh;
         }
-        .box-7-1{
-            background-color: #fff;
-            border-radius: 3rem;
-            height: 100%;
-        }
-        .box-6-1{
-            margin-bottom: 3vh;
-            height: 100%;
-        }
         .column2{
             width: 70%;
         }
         #box{
             cursor: pointer;
+            transition: 0.5s;
         }
         #box:hover{
-            scale: 1.05;  
             transition: 0.5s;
-            
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.148);
         }
         .column4{
             width: 50%;
         }
+        .mamahome{
+            position: absolute;
+            width: 55vh;
+            height: auto;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
         @media (max-width: 1500px){
             body{
                 flex-direction: column;
-                flex: 100%;
-                
+                flex: 100%;  
             }
             .navicon{
                 flex-direction: row;
+                height: 100%;
             }
             .navlist{
                 width: 95%;
-                height: 15vh;
+                height: 8vh;
                 margin-right: 0;
-                padding: 3vh;
-                bottom: 0%;
+                padding: 0vh;
+                bottom: 1.5%;
+                position: fixed;
+                right: 2.5%;
             }
             .icon{
-                margin: 0.5vh;
-                width: 7vh;
-            
-            }
-            .blank{
-                width: 100%;
-                height: 15vh;
+                margin: 3vh;
+                width: 4vh;
             }
             .task{
                 height: 100vh;
-                margin-left: 0;
+                padding-left: 0;
                 margin-bottom: 15vh;
             }
             .row2{
@@ -156,6 +175,7 @@
             }
             .box1{
                 height: 20vh;
+                font-size: 4vh;
             }
             .box-2-1{
                 width: 100%;
@@ -168,11 +188,11 @@
             }
             .boxpage2-1{
             background-color: #fff;
-        }
+            }
+            .mamahome{
+                display: none;
+            }
         .box-6-1{
-            height: 25%;
-        }
-        .box-7-1{
             height: 25%;
         }
         .column3{
@@ -183,57 +203,32 @@
         }
     }
     </style>
-      
+    <img src="img/mama_home.png" alt="mama_home" class="mamahome">
     <div class="navlist">
         <ul class="navicon m-0 p-0 justify-content-center">
-            <li><img src="icon_home.png" class="icon"></li>
-            <li><img src="icon_reminder.png" class="icon"></li>
-            <li><img src="icon_finance.png" class="icon"></li>
-            <li><img src="icon_exit.png"class="icon"></li>
+            <li><img src="img/icon_home1.png" class="icon" id="icon1"></li>
+            <li><img src="img/icon_reminder1.png" class="icon" id="icon2"></li>
+            <li><img src="img/icon_finance1.png" class="icon" id="icon3"></li>
+            <li><img src="img/icon_exit1.png"class="icon" id="icon4"></li>
         </ul>
     </div>
-</div>
-
-        <section class="task d-flex flex-column  w-100">
-               <div class="box1  " id="box">YO MY KIDS</div>
-           <div class="row2 d-flex flex-row w-100 h-100">
+    
+        <section class="task d-flex flex-column">
+            <div class="box1" id="box">YO MY KIDS</div>
+            <div class="row2 d-flex flex-row w-100 h-100">
                 <div class="column2 d-flex flex-row w-100 h-100">
-                    <div class="box-2-1 w-100" id="box"></div>
+                    <div class="box-2-1" id="box"></div>
                     <div class="row1 d-flex flex-column w-100 ">
                         <div class="column3 d-flex flex-row w-100">
                             <div class="box-3-1 w-100 h-100 " id="box"></div>
                             <div class="box-4-1 w-100 h-100" id="box"></div>
                         </div>
-                        <div class="box-5-1 w-100 h-100" id="box"></div>
+                        <div class="box-5-1 w-100 h-100" id="box">Balance</div>
                     </div>
-                    <div class="column4 d-flex flex-column  h-100">
-                        <div class="box-6-1 w-100  " id="box"></div>
-                        <div class="box-7-1 w-100 " id="box"></div>
+                    <div class="column4 d-flex flex-column h-100">
                     </div>
                 </div>
-
             </div>
         </section>
-        <section class="task d-flex flex-column  w-100">
-            <div class="box1  " id="box">YO MY KIDS</div>
-        <div class="row2 d-flex flex-row w-100 h-100">
-             <div class="column2 d-flex flex-row w-100 h-100">
-                 <div class="box-2-1 w-100" id="box"></div>
-                 <div class="row1 d-flex flex-column w-100 ">
-                     <div class="column3 d-flex flex-row w-100">
-                         <div class="box-3-1 w-100 h-100 " id="box"></div>
-                         <div class="box-4-1 w-100 h-100" id="box"></div>
-                     </div>
-                     <div class="box-5-1 w-100 h-100" id="box"></div>
-                 </div>
-                 <div class="column4 d-flex flex-column  h-100">
-                     <div class="box-6-1 w-100  " id="box"></div>
-                     <div class="box-7-1 w-100 " id="box"></div>
-                 </div>
-             </div>
-
-         </div>
-     </section>
-
 </body>
 </html>
