@@ -39,7 +39,7 @@
                 border-radius: 3rem;
                 padding: 3rem;
                 position: fixed;
-                z-index: 1;
+                z-index: 1000;
             }
             .icon{
                 margin: 8vh;
@@ -222,6 +222,7 @@
                 height: 85%;
                 align-items: center;
                 margin-bottom: 3vh;
+                flex-direction: row;
             }
             .downrow{
                 height: 15%;
@@ -230,8 +231,9 @@
                 margin-bottom: 3vh;
                 margin-right: 3vh;
                 height: 100%;
-                width: 32%;
+                width: 25%;
                 z-index: 1;
+                flex-direction: column;
             }
             .inc{
                 background-color: #fff;
@@ -256,14 +258,14 @@
             }
             .edit{
                 background-color: #fff;
-                width: 32%;
+                width: 36%;
                 border-radius: 3rem;
                 height: 60%;
                 margin-right: 3vh;
             }
             .cat{
                 background-color: #fff;
-                width: 32%;
+                width: 36%;
                 border-radius: 3rem;
                 height: 100%;
             }
@@ -287,6 +289,71 @@
                 font-size: 5vh;
                 color: #3A305A;
                 text-decoration: none;
+            }
+            .finance2{
+                height: 97.5vh;
+                padding-left: 10%;
+                width: 100%;
+                padding-top: 3vh;
+                margin-bottom: 3vh;
+            }
+            .inch{
+                height: 100%;
+                width: 35%;
+                margin-right: 3vh;
+            }
+            .outh{
+                height: 100%;
+                width: 35%;
+                margin-right: 3vh;
+            }
+            .savh{
+                height: 100%;
+                width: 35%;
+                margin-right: 3vh;
+            }
+            .inch1{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 5vh;
+                height: 15%;
+                width: 100%;
+            }
+            .inch2{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 3vh;
+                height: 85%;
+                width: 100%;
+            }
+            .outh1{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 5vh;
+                height: 15%;
+                width: 100%;
+            }
+            .outh2{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 3vh;
+                height: 85%;
+                width: 100%;
+            }
+            .savh1{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 5vh;
+                height: 15%;
+                width: 100%;
+            }
+            .savh2{
+                background-color: #fff;
+                border-radius: 3rem;
+                margin-top: 3vh;
+                height: 85%;
+                width: 100%;
+            }
             @media (max-width: 900px){
                 #box{
                     border-radius: 2rem;
@@ -410,6 +477,49 @@
                 .alltasks{
                     margin-bottom: 1vh;
                 }
+                /* finance1 */
+                .tea, .his{
+                    display: none;
+                }
+                .uprow{
+                    flex-direction: column;
+                }
+                .bal{
+                    margin-bottom: 0;
+                    margin-right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .finance1{
+                    height: 97.5vh;
+                    padding-left: 0;
+                    width: 100%;
+                    padding-top: 3vh;
+                    margin-bottom: 3vh;
+                }
+                .edit{
+                    margin-right: 0;
+                    margin-bottom: 3vh;
+                    width: 100%;
+                }
+                .cat{
+                    width: 100%;
+                }
+                .inc{
+                    margin-top: 1vh;
+                    margin-bottom: 3vh;
+                    width: 100%;
+                }
+                .out{
+                    margin-top: 0;
+                    margin-bottom: 3vh;
+                    width: 100%;
+                }
+                .sav{
+                    margin-top: 0;
+                    margin-bottom: 3vh;
+                    width: 100%;
+                }
             }
         </style>
 <!-- icon -->
@@ -471,8 +581,8 @@
             </section>
 <!-- finance1 -->
             <section class="finance1 d-flex flex-column" id="finance1">
-                <div class="uprow d-flex flex-row w-100">
-                    <div class="bal d-flex flex-column">
+                <div class="uprow d-flex w-100">
+                    <div class="bal d-flex">
                         <div class="inc" id="box"></div>
                         <div class="out" id="box"></div>
                         <div class="sav" id="box"></div>
@@ -489,8 +599,19 @@
                 </div>
             </section>
 <!-- finance2 -->
-            <section class="finance2" id="finance2">
-
+            <section class="finance2 d-flex flex-row" id="finance2">
+                <div class="inch d-flex flex-column">
+                    <div class="inch1" id="box"></div>
+                    <div class="inch2" id="box"></div>
+                </div>
+                <div class="outh d-flex flex-column">
+                    <div class="outh1" id="box"></div>
+                    <div class="outh2" id="box"></div>
+                </div>
+                <div class="savh d-flex flex-column">
+                    <div class="savh1" id="box"></div>
+                    <div class="savh2" id="box"></div>
+                </div>
             </section> 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
         AOS.init();
