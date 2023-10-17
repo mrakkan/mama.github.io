@@ -189,8 +189,15 @@
                 left: 14.5%;
                 top: 6%;
             }
-            .complete, .left {
-                background-color: #FDD;
+            .complete{
+                background-color: #c6dbf6;
+                border-radius: 3rem;
+                width: 100%;
+                height: 25%;
+                margin-bottom: 4.5vh;
+            }
+            .left {
+                background-color: rgb(255, 240, 192);
                 border-radius: 3rem;
                 width: 100%;
                 height: 25%;
@@ -203,6 +210,83 @@
                 font-size: 4vh;
                 text-align: center;
             }
+            /* finance1 */
+            .finance1{
+                height: 97.5vh;
+                padding-left: 10%;
+                width: 100%;
+                padding-top: 3vh;
+                margin-bottom: 3vh;
+            }
+            .uprow{
+                height: 85%;
+                align-items: center;
+                margin-bottom: 3vh;
+            }
+            .downrow{
+                height: 15%;
+            }
+            .bal{
+                margin-bottom: 3vh;
+                margin-right: 3vh;
+                height: 100%;
+                width: 32%;
+                z-index: 1;
+            }
+            .inc{
+                background-color: #fff;
+                width: 100%;
+                border-radius: 3rem;
+                height: 30%;
+                margin-top: 8vh;
+            }
+            .out{
+                background-color: #fff;
+                width: 100%;
+                border-radius: 3rem;
+                height: 30%;
+                margin-top: 8vh;
+            }
+            .sav{
+                background-color: #fff;
+                width: 100%;
+                border-radius: 3rem;
+                height: 30%;
+                margin-top: 8vh;
+            }
+            .edit{
+                background-color: #fff;
+                width: 32%;
+                border-radius: 3rem;
+                height: 60%;
+                margin-right: 3vh;
+            }
+            .cat{
+                background-color: #fff;
+                width: 32%;
+                border-radius: 3rem;
+                height: 100%;
+            }
+            .tea{
+                background-color: #fff;
+                width: 67%;
+                border-radius: 3rem;
+                height: 100%;
+                margin-right: 3vh;
+                text-align: center;
+                padding: 3vh;
+                font-size: 5vh;
+            }
+            .his{
+                background-color: #fff;
+                width: 33%;
+                border-radius: 3rem;
+                height: 100%;
+                text-align: center;
+                padding: 3vh;
+                font-size: 5vh;
+                color: #3A305A;
+                text-decoration: none;
             @media (max-width: 900px){
                 #box{
                     border-radius: 2rem;
@@ -299,6 +383,9 @@
                 .left{
                     display: none;
                 }
+                .cheerup{
+                    display: none;
+                }
                 .note{
                     width: 100%;
                     padding-left: 0;
@@ -314,14 +401,14 @@
                     height: 40%;
                 }
                 .complete2{
-                    background-color: #FDD;
+                    background-color: #c6dbf6;
                     margin-right: 3vh;
                 }
                 .left2{
-                    background-color: #FDD;
+                    background-color: rgb(255, 240, 192);
                 }
                 .alltasks{
-                    margin-bottom: 3vh;
+                    margin-bottom: 1vh;
                 }
             }
         </style>
@@ -330,7 +417,7 @@
             <ul class="navicon m-0 p-0 justify-content-center">
                 <li onclick="topFunction()"><img src="img/icon_home1.png" class="icon" id="icon1"></li>
                 <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2"></a></li>
-                <li><a href="#finance"><img src="img/icon_finance1.png" class="icon" id="icon3"></a></li>
+                <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3"></a></li>
                 <li><img src="img/icon_exit1.png" class="icon" id="icon4"></li>
             </ul>
         </div>
@@ -364,7 +451,7 @@
             </section>
         </div>
 <!-- note -->
-            <section id="note" class="note d-flex flex-column">
+            <section class="note d-flex flex-column" id="note">
                 <div class="notecolumn d-flex flex-row w-100 h-100">
                     <img src="img/mamanote.png" alt="mamanote" class="mamanote">
                     <div class="cheerup">
@@ -382,10 +469,29 @@
                         </div>
                 </div>
             </section>
-<!-- finance -->
-            <section>
-
+<!-- finance1 -->
+            <section class="finance1 d-flex flex-column" id="finance1">
+                <div class="uprow d-flex flex-row w-100">
+                    <div class="bal d-flex flex-column">
+                        <div class="inc" id="box"></div>
+                        <div class="out" id="box"></div>
+                        <div class="sav" id="box"></div>
+                    </div>
+                    <div class="edit" id="box"></div>
+                    <div class="cat" id="box"></div>
+                </div>
+                <div class="downrow d-flex flex-row w-100">
+                    <div class="tea" id="box">Save money and money will save you.</div>
+                    <a href="#finance2" class="his" id="box">
+                        History
+                    </a>
+                    </div>
+                </div>
             </section>
+<!-- finance2 -->
+            <section class="finance2" id="finance2">
+
+            </section> 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
         AOS.init();
         </script>
