@@ -6,522 +6,9 @@
         <title>Document</title>
         <link rel="stylesheet" href="bootstrap tp/css/bootstrap.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="stylehome.css">
     </head>
     <body class="d-flex">
-        <style>
-            *{
-            font-family: 'Oduda';
-            color: #3A305A;
-            }
-            body{
-                background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
-                background-attachment: fixed;
-                padding: 3vh;
-                flex-direction: column;
-                height: 1000vh;
-            }
-            .task{
-                height: 94.6vh;
-                padding-left: 10%;
-                width: 100%;
-            }
-            .navicon{
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            .navlist{
-                width: 6rem;
-                height: 95%;
-                background-color: #FDD;
-                border-radius: 3rem;
-                padding: 3rem;
-                position: fixed;
-                z-index: 1000;
-            }
-            .icon{
-                margin: 8vh;
-                width: 5vh;
-                cursor: pointer;
-                transition: 0.3s ease;
-            }
-            .icon:hover{
-                transform: scale(1.2);
-            }
-            #icon1:hover{
-                content: url(img/icon_home.png);
-            }
-
-            #icon2:hover{
-                content: url(img/icon_reminder.png);
-            }
-            
-            #icon3:hover{
-                content: url(img/icon_finance.png);
-            }
-
-            #icon4:hover{
-                content: url(img/icon_exit.png);
-            }
-            .box1{
-                background-color: #fff;
-                height: 40%;
-                margin-bottom: 3vh;
-                border-radius: 3rem;
-                text-align: start;
-                font-size: 8vh;
-                width: 100%;
-                padding: 2vh;
-                padding-left: 4vh;
-            }
-            .box-2-1{
-                background-color: #fff;
-                width: 100vh;
-                border-radius: 3rem;
-                margin-right: 3vh;
-                height: 100%;
-                font-size: 4vh;
-                padding: 2vh;
-                padding-left: 4vh;
-            }
-            .box-3-1{
-                background-color: #fff;
-                border-radius: 3rem;
-            }
-            .box-4-1{
-                background-color: #fff;
-                border-radius: 3rem;
-                padding: 2vh;
-                padding-left: 4vh;
-                font-size: 4vh;
-                margin-left: 3vh;
-            }
-            .column3{
-                margin-bottom: 3vh;
-                height: 100%;
-            }
-            .box-5-1{
-                background-color: #fff;
-                border-radius: 3rem;
-                text-align: start;
-                font-size: 4vh;
-                padding: 2vh;
-                padding-left: 4vh;
-                height: 100%;
-            }
-            .row1{
-                margin-right: 3vh;
-                height: 100%;
-            }
-            .row2{
-                width: 40vh;
-            }
-            .column2{
-                width: 70%;
-            }
-            #box{
-                cursor: pointer;
-                transition: 0.5s;
-            }
-            #box:hover{
-                transition: 0.5s;
-                box-shadow: 0 0 30px rgba(0, 0, 0, 0.148);
-            }
-            .column4{
-                width: 45%;
-                height: 50%;
-            }
-            .mamahome{
-                position: absolute;
-                height: 100%;
-                bottom: 0;
-                right: 0;
-                z-index: 1;
-            }
-            .mamafloat{
-                position: relative;
-                height: 94.6vh;
-                width: 100%;
-                margin-bottom: 3vh;
-            }
-            /* note */
-            .note{
-                position: relative;
-                padding-top: 3vh;
-                height: 98vh;
-                padding-left: 10%;
-                width: 100%;
-            }
-            .cheerupbg{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-right: 3vh;
-                height: 100%;
-                padding: 2vh;
-                width: 35%;
-            }
-            .notecolumn2{
-                height: 100%;
-            }
-            .quote{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-bottom: 3vh;
-                height: 17%;
-                font-size: 7vh;
-                padding: 2vh;
-                text-align: center;
-            }
-            .cheerup{
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                height: 120vh;
-                width: 18%;
-                top: 29%;
-                left: 12.6%;
-            }
-            .mamanote{
-                position: absolute;
-                width: 15%;
-                left: 14.5%;
-                top: 6%;
-            }
-            .complete{
-                background-color: #c6dbf6;
-                border-radius: 3rem;
-                width: 100%;
-                height: 25%;
-                margin-bottom: 4.5vh;
-            }
-            .left {
-                background-color: rgb(255, 240, 192);
-                border-radius: 3rem;
-                width: 100%;
-                height: 25%;
-                margin-bottom: 4.5vh;
-            }
-            .alltasks{
-                background-color: #fff;
-                border-radius: 3rem;
-                padding: 2vh;
-                font-size: 4vh;
-                text-align: center;
-            }
-            /* finance1 */
-            .finance1{
-                height: 97.5vh;
-                padding-left: 10%;
-                width: 100%;
-                padding-top: 3vh;
-                margin-bottom: 3vh;
-            }
-            .uprow{
-                height: 85%;
-                align-items: center;
-                margin-bottom: 3vh;
-                flex-direction: row;
-            }
-            .downrow{
-                height: 15%;
-            }
-            .bal{
-                margin-bottom: 3vh;
-                margin-right: 3vh;
-                height: 100%;
-                width: 25%;
-                z-index: 1;
-                flex-direction: column;
-            }
-            .inc{
-                background-color: #fff;
-                width: 100%;
-                border-radius: 3rem;
-                height: 30%;
-                margin-top: 8vh;
-            }
-            .out{
-                background-color: #fff;
-                width: 100%;
-                border-radius: 3rem;
-                height: 30%;
-                margin-top: 8vh;
-            }
-            .sav{
-                background-color: #fff;
-                width: 100%;
-                border-radius: 3rem;
-                height: 30%;
-                margin-top: 8vh;
-            }
-            .edit{
-                background-color: #fff;
-                width: 36%;
-                border-radius: 3rem;
-                height: 60%;
-                margin-right: 3vh;
-            }
-            .cat{
-                background-color: #fff;
-                width: 36%;
-                border-radius: 3rem;
-                height: 100%;
-            }
-            .tea{
-                background-color: #fff;
-                width: 67%;
-                border-radius: 3rem;
-                height: 100%;
-                margin-right: 3vh;
-                text-align: center;
-                padding: 3vh;
-                font-size: 5vh;
-            }
-            .his{
-                background-color: #fff;
-                width: 33%;
-                border-radius: 3rem;
-                height: 100%;
-                text-align: center;
-                padding: 3vh;
-                font-size: 5vh;
-                color: #3A305A;
-                text-decoration: none;
-            }
-            .finance2{
-                height: 97.5vh;
-                padding-left: 10%;
-                width: 100%;
-                padding-top: 3vh;
-                margin-bottom: 3vh;
-            }
-            .inch{
-                height: 100%;
-                width: 35%;
-                margin-right: 3vh;
-            }
-            .outh{
-                height: 100%;
-                width: 35%;
-                margin-right: 3vh;
-            }
-            .savh{
-                height: 100%;
-                width: 35%;
-                margin-right: 3vh;
-            }
-            .inch1{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 5vh;
-                height: 15%;
-                width: 100%;
-            }
-            .inch2{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 3vh;
-                height: 85%;
-                width: 100%;
-            }
-            .outh1{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 5vh;
-                height: 15%;
-                width: 100%;
-            }
-            .outh2{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 3vh;
-                height: 85%;
-                width: 100%;
-            }
-            .savh1{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 5vh;
-                height: 15%;
-                width: 100%;
-            }
-            .savh2{
-                background-color: #fff;
-                border-radius: 3rem;
-                margin-top: 3vh;
-                height: 85%;
-                width: 100%;
-            }
-            @media (max-width: 900px){
-                #box{
-                    border-radius: 2rem;
-                }
-                body{
-                    flex-direction: column;
-                    flex: 100%;  
-                }
-                .navicon{
-                    flex-direction: row;
-                    height: 100%;
-                }
-                .navlist{
-                    width: 95%;
-                    height: 8vh;
-                    margin-right: 0;
-                    padding: 0vh;
-                    bottom: 1.5%;
-                    position: fixed;
-                    right: 2.5%;
-                }
-                .icon{
-                    margin: 3vh;
-                    width: 4vh;
-                }
-                .task{
-                    height: 85vh;
-                    padding-left: 0;
-                }
-                .row2{
-                    flex-direction: column;
-                    flex: 100%;
-                    flex-wrap: wrap;
-                }
-                .row1{
-                    margin-right: 0;
-                    height: 60%;
-                }
-                .column2{
-                    flex-direction: column;
-                    flex: 100%;
-                    flex-wrap: wrap;
-                    height: 70%;
-                }
-                .box1{
-                    height: 15%;
-                    font-size: 3vh;
-                }
-                .box-2-1{
-                    width: 100%;
-                    height: 40%;
-                    margin-right: 0;
-                    margin-bottom: 3vh;
-                    font-size: 2.5vh;
-                }
-                .column4{
-                    position: absolute;
-                    z-index: -1;
-                }
-                .boxpage2-1{
-                    background-color: #fff;
-                }
-                .mamahome{
-                    display: none;
-                }
-                .mamafloat{
-                    height: 85vh;
-                    padding-left: 0;
-                }
-                .box-6-1{
-                    height: 25%;
-                }
-                .column3{
-                    height: 40%;
-                }
-                .box-5-1{
-                    font-size: 2.5vh;
-                    height: 43%;
-                    margin-bottom: 3vh;
-                }
-                .box-4-1{
-                    font-size: 2.5vh;
-                }
-                /* note */
-                .cheerupbg{
-                    display: none;
-                }
-                .mamanote{
-                    display: none;
-                }
-                .complete{
-                    display: none;
-                }
-                .left{
-                    display: none;
-                }
-                .cheerup{
-                    display: none;
-                }
-                .note{
-                    width: 100%;
-                    padding-left: 0;
-                    height: 88.8vh;
-                }
-                .quote{
-                    font-size: 2.5vh;
-                    padding-bottom: 6vh;
-                    height: 5%;
-                }
-                .rescom{
-                    margin-bottom: 3vh;
-                    height: 40%;
-                }
-                .complete2{
-                    background-color: #c6dbf6;
-                    margin-right: 3vh;
-                }
-                .left2{
-                    background-color: rgb(255, 240, 192);
-                }
-                .alltasks{
-                    margin-bottom: 1vh;
-                }
-                /* finance1 */
-                .tea, .his{
-                    display: none;
-                }
-                .uprow{
-                    flex-direction: column;
-                }
-                .bal{
-                    margin-bottom: 0;
-                    margin-right: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-                .finance1{
-                    height: 97.5vh;
-                    padding-left: 0;
-                    width: 100%;
-                    padding-top: 3vh;
-                    margin-bottom: 3vh;
-                }
-                .edit{
-                    margin-right: 0;
-                    margin-bottom: 3vh;
-                    width: 100%;
-                }
-                .cat{
-                    width: 100%;
-                }
-                .inc{
-                    margin-top: 1vh;
-                    margin-bottom: 3vh;
-                    width: 100%;
-                }
-                .out{
-                    margin-top: 0;
-                    margin-bottom: 3vh;
-                    width: 100%;
-                }
-                .sav{
-                    margin-top: 0;
-                    margin-bottom: 3vh;
-                    width: 100%;
-                }
-            }
-        </style>
 <!-- icon -->
         <div class= "navlist">
             <ul class="navicon m-0 p-0 justify-content-center">
@@ -543,16 +30,16 @@
         <div class="mamafloat">
             <img src="img/mama_home.png" alt="mama_home" class="mamahome">
             <section id="home" class="task d-flex flex-column">
-                <div class="box1" id="box">Yo my kids</div>
+                <div class="box1">Yo my kids</div>
                 <div class="row2 d-flex flex-row w-100 h-100">
                     <div class="column2 d-flex flex-row w-100 h-100">
-                        <div class="box-2-1" id="box">Today Tasks</div>
+                        <a href="#note" class="box-2-1" id="box">Today Tasks</a>
                         <div class="row1 d-flex flex-column w-100">
                             <div class="column3 d-flex flex-row w-100">
                                 <div class="box-3-1 w-50 h-100 " id="box"></div>
                                 <div class="box-4-1 w-50 h-100" id="box">Meal Ideas</div>
                             </div>
-                            <div class="box-5-1 w-100" id="box">Balance</div>
+                            <a href="#finance1" class="box-5-1 w-100" id="box">Balance</a>
                         </div>
                         <div class="column4 d-flex flex-column h-100">
                         </div>
@@ -562,20 +49,15 @@
         </div>
 <!-- note -->
             <section class="note d-flex flex-column" id="note">
-                <div class="notecolumn d-flex flex-row w-100 h-100">
-                    <img src="img/mamanote.png" alt="mamanote" class="mamanote">
-                    <div class="cheerup">
-                        <div class="complete" id="box"></div>
-                        <div class="left" id="box"></div>
+                <div class="notecolumn d-flex w-100 h-100">
+                    <div class="cheerupbg d-flex">
+                        <div class="complete"></div>
+                        <img src="img/mamanote.png" alt="mamanote" class="mamanote">
+                        <div class="left"></div>
                     </div>
-                    <div class="cheerupbg" id="box"></div>
                         <div class="notecolumn2 d-flex flex-column w-100">
-                            <div class="quote w-100" id="box">You’re getting better everyday!</div>
-                            <div class="rescom d-flex flex-row w-100">
-                                <div class="complete2 w-100 h-100 " id="box"></div>
-                                <div class="left2 w-100 h-100" id="box"></div>
-                            </div>
-                            <div class="alltasks w-100 h-100" id="box">All Tasks</div>
+                            <div class="quote w-100">You’re getting better everyday!</div>
+                            <div class="alltasks w-100 h-100">All Tasks</div>
                         </div>
                 </div>
             </section>
@@ -583,15 +65,27 @@
             <section class="finance1 d-flex flex-column" id="finance1">
                 <div class="uprow d-flex w-100">
                     <div class="bal d-flex">
-                        <div class="inc" id="box"></div>
-                        <div class="out" id="box"></div>
-                        <div class="sav" id="box"></div>
+                        <div class="inc1 d-flex flex-row">
+                            <img src="img/income.png" alt="income" class="income">
+                            <p>Income</p>
+                        </div>
+                        <div class="inc"></div>
+                        <div class="out1 d-flex flex-row">
+                            <img src="img/outcome.png" alt="outcome" class="outcome">
+                            <p>Outcome</p>
+                        </div>
+                        <div class="out"></div>
+                        <div class="sav1 d-flex flex-row">
+                            <img src="img/savings.png" alt="savings" class="savings">
+                            <p>Savings</p>
+                        </div>
+                        <div class="sav"></div>
                     </div>
-                    <div class="edit" id="box"></div>
-                    <div class="cat" id="box"></div>
+                    <div class="edit"></div>
+                    <div class="cat"></div>
                 </div>
-                <div class="downrow d-flex flex-row w-100">
-                    <div class="tea" id="box">Save money and money will save you.</div>
+                <div class="downrow d-flex w-100">
+                    <div class="tea">Save money and money will save you.</div>
                     <a href="#finance2" class="his" id="box">
                         History
                     </a>
@@ -599,18 +93,27 @@
                 </div>
             </section>
 <!-- finance2 -->
-            <section class="finance2 d-flex flex-row" id="finance2">
+            <section class="finance2 d-flex" id="finance2">
                 <div class="inch d-flex flex-column">
-                    <div class="inch1" id="box"></div>
-                    <div class="inch2" id="box"></div>
+                    <div class="inch1 d-flex flex-row">
+                        <img src="img/income.png" alt="income" class="income">
+                        <p>Savings</p>
+                    </div>
+                    <div class="inch2"></div>
                 </div>
                 <div class="outh d-flex flex-column">
-                    <div class="outh1" id="box"></div>
-                    <div class="outh2" id="box"></div>
+                    <div class="outh1 d-flex flex-row">
+                        <img src="img/outcome.png" alt="outcome" class="outcome">
+                        <p>Outcome</p>
+                    </div>
+                    <div class="outh2"></div>
                 </div>
                 <div class="savh d-flex flex-column">
-                    <div class="savh1" id="box"></div>
-                    <div class="savh2" id="box"></div>
+                    <div class="savh1 d-flex flex-row">
+                        <img src="img/savings.png" alt="savings" class="savings">
+                        <p>Savings</p>
+                    </div>
+                    <div class="savh2"></div>
                 </div>
             </section> 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
