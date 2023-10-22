@@ -175,7 +175,7 @@
         width: 14%;
     }
     .complete{
-        background-color: #c6dbf6;
+        background-color: #d7eee9;
         border-radius: 3rem;
         width: 100%;
         height: 50%;
@@ -183,7 +183,7 @@
         margin-top: 20vh;
     }
     .left {
-        background-color: rgb(255, 240, 192);
+        background-color: rgb(255, 248, 223);
         border-radius: 3rem;
         width: 100%;
         height: 50%;
@@ -317,7 +317,6 @@
         padding-left: 8rem;
         width: 100%;
         padding-top: 3vh;
-        margin-bottom: 3vh;
         flex-direction: row;
     }
     .inch{
