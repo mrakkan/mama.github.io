@@ -499,16 +499,12 @@
             padding: 3vh;
         }
         .complete{
-            background-color: #c6dbf6;
-            border-radius: 3rem;
             width: 50%;
             height: 100%;
             margin-top: 0;
             margin-right: 3vh;
         }
         .left {
-            background-color: rgb(255, 240, 192);
-            border-radius: 3rem;
             width: 50%;
             height: 100%;
             margin-top: 0;
