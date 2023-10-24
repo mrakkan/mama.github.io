@@ -11,6 +11,7 @@
         background-attachment: fixed;
         padding: 3vh;
         flex-direction: column;
+        background-position: center;
     }
     .task{
         height: 94.6vh;
