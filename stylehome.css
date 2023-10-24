@@ -152,10 +152,9 @@
         background-color: #fff;
         border-radius: 3rem;
         margin-bottom: 3vh;
-        height: 17%;
+        height: 10%;
         font-size: 4.5vh;
-        padding: 2vh;
-        padding-top: 3.5vh;
+        padding: 1vh;
         text-align: center;
     }
     .mamanote{
@@ -184,6 +183,7 @@
         padding: 2vh;
         font-size: 5vh;
         text-align: center;
+        height: 90%;
     }
     /* finance1 */
     .finance1{
@@ -286,7 +286,7 @@
         height: 100%;
         margin-right: 3vh;
         text-align: center;
-        padding: 3vh;
+        padding-top: 3vh;
         font-size: 4.5vh;
     }
     .his{
@@ -471,7 +471,7 @@
         }
         .quote{
             font-size: 2.5vh;
-            padding-bottom: 6vh;
+            padding-bottom: 5vh;
             height: 5%;
         }
         .alltasks{
@@ -504,6 +504,7 @@
             width: 100%;
             margin-right: 0;
             margin-bottom: 3vh;
+            padding: 3.2vh;
         }
         .his{
             font-size: 2.5vh;
