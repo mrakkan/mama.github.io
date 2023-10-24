@@ -153,8 +153,9 @@
         border-radius: 3rem;
         margin-bottom: 3vh;
         height: 17%;
-        font-size: 7vh;
+        font-size: 4.5vh;
         padding: 2vh;
+        padding-top: 3.5vh;
         text-align: center;
     }
     .mamanote{
@@ -230,7 +231,7 @@
     }
     p{
         margin-bottom: 0;
-        font-size: 5vh;
+        font-size: 4.5vh;
     }
     .inc1{
         width: 100%;
@@ -286,7 +287,7 @@
         margin-right: 3vh;
         text-align: center;
         padding: 3vh;
-        font-size: 5vh;
+        font-size: 4.5vh;
     }
     .his{
         background-color: #fff;
@@ -295,7 +296,7 @@
         height: 100%;
         text-align: center;
         padding: 3vh;
-        font-size: 5vh;
+        font-size: 4.5vh;
         color: #3A305A;
         text-decoration: none;
     }
