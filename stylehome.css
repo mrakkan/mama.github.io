@@ -175,7 +175,7 @@
         width: 14%;
     }
     .complete{
-        background-color: #d7eee9;
+        background-color: #e0f2ee;
         border-radius: 3rem;
         width: 100%;
         height: 50%;
@@ -604,6 +604,7 @@
             padding-left: 0;
             height: 89vh;
             padding-top: 0;
+            margin-bottom: 8vh;
         }
         .inch{
             height: 100%;
