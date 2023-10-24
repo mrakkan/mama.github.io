@@ -3,8 +3,8 @@
     color: #3A305A;
     }
     @font-face {
-        font-family: Oduda;
-        src: url(Oduda-Bold-Demo.otf);
+        font-family: 'Oduda';
+        src: url(Oduda-Bold-Demo.otf) format(otf);
     }
     body{
         background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
