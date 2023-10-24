@@ -1,45 +1,45 @@
 *{
     font-family: 'Kanit';
     color: #3A305A;
-    }
+}
     /* @font-face {
         font-family: 'dduddu';
         src: url(Oduda-Bold-Demo.otf) format(otf);
     } */
-    body{
-        background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
-        background-attachment: fixed;
-        padding: 3vh;
-        flex-direction: column;
-        background-position: center;
-    }
-    .task{
-        height: 94.6vh;
-        padding-left: 8rem;
-        width: 100%;
-    }
-    .navicon{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .navlist{
-        width: 6rem;
-        height: 95%;
-        background-color: #FDD;
-        border-radius: 3rem;
-        padding: 3rem;
-        position: fixed;
-        z-index: 1000;
-    }
-    .icon{
-        margin: 8vh;
-        width: 5vh;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
+body{
+    background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
+    background-attachment: fixed;
+    padding: 3vh;
+    flex-direction: column;
+    background-position: center;
+}
+.task{
+    height: 94.6vh;
+    padding-left: 8rem;
+    width: 100%;
+}
+.navicon{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.navlist{
+    width: 6rem;
+    height: 95%;
+    background-color: #FDD;
+    border-radius: 3rem;
+    padding: 3rem;
+    position: fixed;
+    z-index: 1000;
+}
+.icon{
+    margin: 8vh;
+    width: 5vh;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
     .icon:hover{
         transform: scale(1.2);
     }
