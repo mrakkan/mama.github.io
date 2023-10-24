@@ -12,10 +12,10 @@
 <!-- icon -->
         <div class= "navlist">
             <ul class="navicon m-0 p-0 justify-content-center">
-                <li onclick="topFunction()"><img src="img/icon_home1.png" class="icon" id="icon1"></li>
-                <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2"></a></li>
-                <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3"></a></li>
-                <li><img src="img/icon_exit1.png" class="icon" id="icon4"></li>
+                <li onclick="topFunction()"><img src="img/icon_home1.png" class="icon" id="icon1" onmouseover="changeImage(this, 'img/icon_home.png')" onmouseout="changeImage(this, 'img/icon_home1.png')"></li>
+                <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2" onmouseover="changeImage(this, 'img/icon_reminder.png')" onmouseout="changeImage(this, 'img/icon_reminder1.png')"></a></li>
+                <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3" onmouseover="changeImage(this, 'img/icon_finance.png')" onmouseout="changeImage(this, 'img/icon_finance1.png')"></a></li>
+                <li><img src="img/icon_exit1.png" class="icon" id="icon4" onmouseover="changeImage(this, 'img/icon_exit.png')" onmouseout="changeImage(this, 'img/icon_exit1.png')"></li>
             </ul>
         </div>
         <script>
@@ -24,6 +24,10 @@
             {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+            }
+
+            function changeImage(element, newSrc) {
+                element.src = newSrc;
             }
         </script>
 <!-- home -->

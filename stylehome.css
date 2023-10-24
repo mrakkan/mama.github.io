@@ -38,20 +38,6 @@
     .icon:hover{
         transform: scale(1.2);
     }
-    #icon1:hover{
-        content: url(img/icon_home.png);
-    }
-    #icon2:hover{
-        content: url(img/icon_reminder.png);
-    }
-    
-    #icon3:hover{
-        content: url(img/icon_finance.png);
-    }
-
-    #icon4:hover{
-        content: url(img/icon_exit.png);
-    }
     .box1{
         background-color: #fff;
         height: 40%;
