@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap tp/css/bootstrap.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="stylehome.css">
+    </head>
+    <body class="d-flex">
+<!-- icon -->
+        <div class= "navlist">
+            <ul class="navicon m-0 p-0 justify-content-center">
+                <li onclick="topFunction()"><img src="img/icon_home1.png" class="icon" id="icon1"></li>
+                <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2"></a></li>
+                <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3"></a></li>
+                <li><img src="img/icon_exit1.png" class="icon" id="icon4"></li>
+            </ul>
+        </div>
+        <script>
+            let mybutton = document.getElementById("icon1");
+            function topFunction()
+            {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        </script>
+<!-- home -->
+        <div class="mamafloat">
+            <img src="img/mama_home.png" alt="mama_home" class="mamahome">
+            <section id="home" class="task d-flex flex-column">
+                <div class="box1">Yo my kids</div>
+                <div class="row2 d-flex flex-row w-100 h-100">
+                    <div class="column2 d-flex flex-row w-100 h-100">
+                        <a href="#note" class="box-2-1" id="box">Today Tasks</a>
+                        <div class="row1 d-flex flex-column w-100">
+                            <div class="column3 d-flex flex-row w-100">
+                                <div class="box-3-1 w-50 h-100 " id="box"></div>
+                                <div class="box-4-1 w-50 h-100" id="box">Meal Ideas</div>
+                            </div>
+                            <a href="#finance1" class="box-5-1 w-100" id="box">Balance</a>
+                        </div>
+                        <div class="column4 d-flex flex-column h-100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- note -->
+            <section class="note d-flex flex-column" id="note">
+                <div class="notecolumn d-flex w-100 h-100">
+                    <div class="cheerupbg d-flex">
+                        <div class="complete"></div>
+                        <img src="img/mamanote.png" alt="mamanote" class="mamanote">
+                        <div class="left"></div>
+                    </div>
+                        <div class="notecolumn2 d-flex flex-column w-100">
+                            <div class="quote w-100">You’re getting better everyday!</div>
+                            <div class="alltasks w-100 h-100">All Tasks</div>
+                        </div>
+                </div>
+            </section>
+<!-- finance1 -->
+            <section class="finance1 d-flex flex-column" id="finance1">
+                <div class="uprow d-flex w-100">
+                    <div class="bal d-flex">
+                        <div class="inc1 d-flex flex-row">
+                            <img src="img/income.png" alt="income" class="income">
+                            <p>Income</p>
+                        </div>
+                        <div class="inc"></div>
+                        <div class="out1 d-flex flex-row">
+                            <img src="img/outcome.png" alt="outcome" class="outcome">
+                            <p>Outcome</p>
+                        </div>
+                        <div class="out"></div>
+                        <div class="sav1 d-flex flex-row">
+                            <img src="img/savings.png" alt="savings" class="savings">
+                            <p>Savings</p>
+                        </div>
+                        <div class="sav"></div>
+                    </div>
+                    <div class="edit"></div>
+                    <div class="cat"></div>
+                </div>
+                <div class="downrow d-flex w-100">
+                    <div class="tea">Save money and money will save you.</div>
+                    <a href="#finance2" class="his" id="box">
+                        History
+                    </a>
+                    </div>
+                </div>
+            </section>
+<!-- finance2 -->
+            <section class="finance2 d-flex" id="finance2">
+                <div class="inch d-flex flex-column">
+                    <div class="inch1 d-flex flex-row">
+                        <img src="img/income.png" alt="income" class="income">
+                        <p>Savings</p>
+                    </div>
+                    <div class="inch2"></div>
+                </div>
+                <div class="outh d-flex flex-column">
+                    <div class="outh1 d-flex flex-row">
+                        <img src="img/outcome.png" alt="outcome" class="outcome">
+                        <p>Outcome</p>
+                    </div>
+                    <div class="outh2"></div>
+                </div>
+                <div class="savh d-flex flex-column">
+                    <div class="savh1 d-flex flex-row">
+                        <img src="img/savings.png" alt="savings" class="savings">
+                        <p>Savings</p>
+                    </div>
+                    <div class="savh2"></div>
+                </div>
+            </section> 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        AOS.init();
+        </script>
+    </body>
+</html>

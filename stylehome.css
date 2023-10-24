@@ -1,0 +1,657 @@
+*{
+    font-family: 'Oduda';
+    color: #3A305A;
+    }
+    body{
+        background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
+        background-attachment: fixed;
+        padding: 3vh;
+        flex-direction: column;
+    }
+    .task{
+        height: 94.6vh;
+        padding-left: 8rem;
+        width: 100%;
+    }
+    .navicon{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navlist{
+        width: 6rem;
+        height: 95%;
+        background-color: #FDD;
+        border-radius: 3rem;
+        padding: 3rem;
+        position: fixed;
+        z-index: 1000;
+    }
+    .icon{
+        margin: 8vh;
+        width: 5vh;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .icon:hover{
+        transform: scale(1.2);
+    }
+    #icon1:hover{
+        content: url(img/icon_home.png);
+    }
+    #icon2:hover{
+        content: url(img/icon_reminder.png);
+    }
+    
+    #icon3:hover{
+        content: url(img/icon_finance.png);
+    }
+
+    #icon4:hover{
+        content: url(img/icon_exit.png);
+    }
+    .box1{
+        background-color: #fff;
+        height: 40%;
+        margin-bottom: 3vh;
+        border-radius: 3rem;
+        text-align: start;
+        font-size: 8vh;
+        width: 100%;
+        padding: 2vh;
+        padding-left: 4vh;
+    }
+    .box-2-1{
+        background-color: #fff;
+        width: 55%;
+        border-radius: 3rem;
+        margin-right: 3vh;
+        height: 100%;
+        font-size: 4vh;
+        padding: 2vh;
+        padding-left: 4vh;
+        text-decoration: none;
+        color: #3A305A;
+    }
+    .box-3-1{
+        background-color: #fff;
+        border-radius: 3rem;
+    }
+    .box-4-1{
+        background-color: #fff;
+        border-radius: 3rem;
+        padding: 2vh;
+        padding-left: 4vh;
+        font-size: 4vh;
+        margin-left: 3vh;
+    }
+    .column3{
+        margin-bottom: 3vh;
+        height: 100%;
+    }
+    .box-5-1{
+        background-color: #fff;
+        border-radius: 3rem;
+        text-align: start;
+        font-size: 4vh;
+        padding: 2vh;
+        padding-left: 4vh;
+        height: 100%;
+        text-decoration: none;
+        color: #3A305A;
+    }
+    .row1{
+        margin-right: 3vh;
+        height: 100%;
+    }
+    .row2{
+        width: 40vh;
+    }
+    .column2{
+        width: 70%;
+    }
+    #box{
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    #box:hover{
+        transition: 0.5s;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.148);
+    }
+    .column4{
+        width: 45%;
+        height: 50%;
+    }
+    .mamahome{
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .mamafloat{
+        position: relative;
+        height: 94.6vh;
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+    /* note */
+    .note{
+        position: relative;
+        padding-top: 3vh;
+        height: 98vh;
+        padding-left: 8rem;
+        width: 100%;
+    }
+    .notecolumn{
+        flex-direction: row;
+    }
+    .cheerupbg{
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-right: 3vh;
+        height: 100%;
+        padding: 4vh;
+        width: 35%;
+        align-items: center;
+    }
+    .notecolumn2{
+        height: 100%;
+    }
+    .quote{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-bottom: 3vh;
+        height: 17%;
+        font-size: 7vh;
+        padding: 2vh;
+        text-align: center;
+    }
+    .mamanote{
+        position: absolute;
+        width: 14%;
+    }
+    .complete{
+        background-color: #e0f2ee;
+        border-radius: 3rem;
+        width: 100%;
+        height: 50%;
+        z-index: 1;
+        margin-top: 20vh;
+    }
+    .left {
+        background-color: rgb(255, 248, 223);
+        border-radius: 3rem;
+        width: 100%;
+        height: 50%;
+        margin-top: 4vh;
+        z-index: 1;
+    }
+    .alltasks{
+        background-color: #fff;
+        border-radius: 3rem;
+        padding: 2vh;
+        font-size: 5vh;
+        text-align: center;
+    }
+    /* finance1 */
+    .finance1{
+        height: 97.5vh;
+        padding-left: 8rem;
+        width: 100%;
+        padding-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .uprow{
+        height: 85%;
+        align-items: center;
+        margin-bottom: 3vh;
+        flex-direction: row;
+    }
+    .downrow{
+        flex-direction: row;
+        height: 15%;
+    }
+    .bal{
+        margin-bottom: 3vh;
+        margin-right: 3vh;
+        height: 100%;
+        width: 25%;
+        z-index: 1;
+        flex-direction: column;
+    }
+    .inc{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    .out{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    .sav{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 5vh;
+    }
+    .inc1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .income{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh;
+    }
+    .out1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .outcome{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh
+    }
+    .sav1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .savings{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh
+    }
+    .edit{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 60%;
+        margin-right: 3vh;
+    }
+    .cat{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 100%;
+    }
+    .tea{
+        background-color: #fff;
+        width: 64%;
+        border-radius: 3rem;
+        height: 100%;
+        margin-right: 3vh;
+        text-align: center;
+        padding: 3vh;
+        font-size: 5vh;
+    }
+    .his{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 100%;
+        text-align: center;
+        padding: 3vh;
+        font-size: 5vh;
+        color: #3A305A;
+        text-decoration: none;
+    }
+    .finance2{
+        height: 97.5vh;
+        padding-left: 8rem;
+        width: 100%;
+        padding-top: 3vh;
+        flex-direction: row;
+    }
+    .inch{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .outh{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .savh{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .inch1{
+        border-radius: 3rem;
+        height: 7%;
+        width: 100%;
+        font-size: 5vh;
+        padding: .5vh;
+        text-align: center;
+    }
+    .inch2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    .outh1{
+        border-radius: 3rem;
+        height: 7%;
+        width: 100%;
+        font-size: 5vh;
+        padding: .5vh;
+        text-align: center;
+    }
+    .outh2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    .savh1{
+        border-radius: 3rem;
+        height: 7%;
+        font-size: 5vh;
+        width: 100%;
+        padding: .5vh;
+        text-align: center;
+    }
+    .savh2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    @media (max-width: 900px){
+        #box{
+            border-radius: 2rem;
+        }
+        body{
+            flex-direction: column;
+            flex: 100%;  
+        }
+        .navicon{
+            flex-direction: row;
+            height: 100%;
+        }
+        .navlist{
+            width: 95%;
+            height: 8vh;
+            margin-right: 0;
+            padding: 0vh;
+            bottom: 1.5%;
+            position: fixed;
+            right: 2.5%;
+        }
+        .icon{
+            margin: 3vh;
+            width: 4vh;
+        }
+        .task{
+            height: 85vh;
+            padding-left: 0;
+        }
+        .row2{
+            flex-direction: column;
+            flex: 100%;
+            flex-wrap: wrap;
+        }
+        .row1{
+            margin-right: 0;
+            height: 60%;
+        }
+        .column2{
+            flex-direction: column;
+            flex: 100%;
+            flex-wrap: wrap;
+            height: 70%;
+        }
+        .box1{
+            height: 20%;
+            font-size: 4vh;
+            padding-left: 2vh;
+        }
+        .box-2-1{
+            width: 100%;
+            height: 40%;
+            margin-right: 0;
+            margin-bottom: 3vh;
+            font-size: 2.5vh;
+            padding-left: 2vh;
+        }
+        .column4{
+            position: absolute;
+            z-index: -1;
+        }
+        .boxpage2-1{
+            background-color: #fff;
+        }
+        .mamahome{
+            display: none;
+        }
+        .mamafloat{
+            height: 85vh;
+            padding-left: 0;
+        }
+        .box-6-1{
+            height: 25%;
+        }
+        .column3{
+            height: 42%;
+        }
+        .box-5-1{
+            font-size: 2.5vh;
+            height: 43%;
+            margin-bottom: 3vh;
+            padding-left: 2vh;
+        }
+        .box-4-1{
+            font-size: 2.5vh;
+            padding-left: 2vh;
+        }
+        /* note */
+        .mamanote{
+            display: none;
+        }
+        .notecolumn{
+            flex-direction: column;
+        }
+        .cheerup{
+            display: none;
+        }
+        .note{
+            width: 100%;
+            padding-left: 0;
+            height: 88.8vh;
+        }
+        .quote{
+            font-size: 2.5vh;
+            padding-bottom: 6vh;
+            height: 5%;
+        }
+        .alltasks{
+            margin-bottom: 1vh;
+            font-size: 4vh;
+        }
+        .cheerupbg{
+            height: 50%;
+            width: 100%;
+            margin-bottom: 3vh;
+            margin-right: 0;
+            flex-direction: row;
+            padding: 3vh;
+        }
+        .complete{
+            width: 50%;
+            height: 100%;
+            margin-top: 0;
+            margin-right: 3vh;
+        }
+        .left {
+            width: 50%;
+            height: 100%;
+            margin-top: 0;
+        }
+        /* finance */
+        .tea{
+            font-size: 2.5vh;
+            height: 60%;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 3vh;
+        }
+        .his{
+            font-size: 2.5vh;
+            width: 60%;
+            height: 40%;
+            padding: 2vh;
+        }
+        .uprow{
+            flex-direction: column;
+            height: 90%;
+        }
+        .downrow{
+            flex-direction: column;
+            align-items: center;
+            height: 10%;
+        }
+        .bal{
+            margin-bottom: 3vh;
+            margin-right: 0;
+            width: 100%;
+            height: 70%;
+        }
+        .finance1{
+            height: 220vh;
+            padding-left: 0;
+            width: 100%;
+            padding-top: 1vh;
+            margin-bottom: 3vh;
+        }
+        .edit{
+            margin-right: 0;
+            margin-bottom: 3vh;
+            width: 100%;
+            height: 35%;
+        }
+        .cat{
+            width: 100%;
+            height: 50%;
+        }
+        .inc{
+            margin-top: 0;
+            margin-bottom: 2vh;
+            width: 100%;
+            height: 33%;
+        }
+        .out{
+            margin-top: 0;
+            margin-bottom: 2vh;
+            width: 100%;
+            height: 33%;
+        }
+        .sav{
+            margin-top: 0;
+            width: 100%;
+            height: 33%;
+        }
+        p{
+            font-size: 4vh;
+        }
+        .inc1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .out1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .sav1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .income{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .outcome{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .savings{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .finance2{
+            flex-direction: column;
+            padding-left: 0;
+            height: 89vh;
+            padding-top: 0;
+            margin-bottom: 8vh;
+        }
+        .inch{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .outh{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .savh{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .inch1{
+            margin-top: 0;
+            margin-bottom: 1vh;
+            height: 20%;
+            font-size: 4vh;
+        }
+        .outh1{
+            margin-top: 0;
+            margin-bottom: 1vh;
+            height: 20%;
+            font-size: 4vh;
+        }
+        .savh1{
+            margin-top: 0;
+            margin-bottom: 1vh;
+            height: 20%;
+            font-size: 4vh;
+        }
+        .inch2{
+            margin-top: 0;
+            height: 80%;
+            font-size: 2.5vh;
+        }
+        .outh2{
+            margin-top: 0;
+            height: 80%;
+            font-size: 4vh;
+        }
+        .savh2{
+            margin-top: 0;
+            height: 80%;
+            font-size: 4vh;
+        }
+    }
