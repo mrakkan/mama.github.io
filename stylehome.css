@@ -1,5 +1,5 @@
 *{
-    font-family: 'Oduda';
+    font-family: "Oduda Bold";
     color: #3A305A;
     }
     body{
@@ -7,6 +7,7 @@
         background-attachment: fixed;
         padding: 3vh;
         flex-direction: column;
+        background-position: center;
     }
     .task{
         height: 94.6vh;
@@ -151,9 +152,9 @@
         background-color: #fff;
         border-radius: 3rem;
         margin-bottom: 3vh;
-        height: 17%;
-        font-size: 7vh;
-        padding: 2vh;
+        height: 10%;
+        font-size: 4.5vh;
+        padding: 1vh;
         text-align: center;
     }
     .mamanote{
@@ -182,6 +183,7 @@
         padding: 2vh;
         font-size: 5vh;
         text-align: center;
+        height: 90%;
     }
     /* finance1 */
     .finance1{
@@ -229,7 +231,7 @@
     }
     p{
         margin-bottom: 0;
-        font-size: 5vh;
+        font-size: 4.5vh;
     }
     .inc1{
         width: 100%;
@@ -284,8 +286,8 @@
         height: 100%;
         margin-right: 3vh;
         text-align: center;
-        padding: 3vh;
-        font-size: 5vh;
+        padding-top: 3vh;
+        font-size: 4.5vh;
     }
     .his{
         background-color: #fff;
@@ -294,7 +296,7 @@
         height: 100%;
         text-align: center;
         padding: 3vh;
-        font-size: 5vh;
+        font-size: 4.5vh;
         color: #3A305A;
         text-decoration: none;
     }
@@ -469,7 +471,7 @@
         }
         .quote{
             font-size: 2.5vh;
-            padding-bottom: 6vh;
+            padding-bottom: 5.5vh;
             height: 5%;
         }
         .alltasks{
@@ -502,6 +504,7 @@
             width: 100%;
             margin-right: 0;
             margin-bottom: 3vh;
+            padding: 3.2vh;
         }
         .his{
             font-size: 2.5vh;
