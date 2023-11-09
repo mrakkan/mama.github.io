@@ -6,13 +6,15 @@
         background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
         background-attachment: fixed;
         padding: 3vh;
+        padding-top: 0;
         flex-direction: column;
         background-position: center;
     }
     .task{
-        height: 94.6vh;
+        height: 97.6vh;
         padding-left: 8rem;
         width: 100%;
+        padding-top: 3vh;
     }
     .navicon{
         list-style: none;
@@ -27,6 +29,7 @@
         background-color: #FDD;
         border-radius: 3rem;
         padding: 3rem;
+        margin-top: 3vh;
         position: fixed;
         z-index: 1000;
     }
@@ -50,6 +53,9 @@
         padding: 2vh;
         padding-left: 4vh;
     }
+    .ranq{
+        font-size: 5vh;
+    }
     .box-2-1{
         background-color: #fff;
         width: 55%;
@@ -69,10 +75,14 @@
     .box-4-1{
         background-color: #fff;
         border-radius: 3rem;
-        padding: 2vh;
-        padding-left: 4vh;
-        font-size: 4vh;
         margin-left: 3vh;
+    }
+    .ranm{
+        background-position: center;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
     }
     .column3{
         margin-bottom: 3vh;
@@ -412,9 +422,14 @@
             height: 70%;
         }
         .box1{
+            justify-content: center;
+            text-align: center;
             height: 20%;
-            font-size: 4vh;
+            font-size: 3vh;
             padding-left: 2vh;
+        }
+        .ranq{
+            font-size: 2.5vh;
         }
         .box-2-1{
             width: 100%;
@@ -448,10 +463,6 @@
             font-size: 2.5vh;
             height: 43%;
             margin-bottom: 3vh;
-            padding-left: 2vh;
-        }
-        .box-4-1{
-            font-size: 2.5vh;
             padding-left: 2vh;
         }
         /* note */
