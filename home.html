@@ -13,36 +13,29 @@
 <!-- icon -->
         <div class= "navlist">
             <ul class="navicon m-0 p-0 justify-content-center">
-                <li onclick="topFunction()"><img src="img/icon_home1.png" class="icon" id="icon1" onmouseover="changeImage(this, 'img/icon_home.png')" onmouseout="changeImage(this, 'img/icon_home1.png')"></li>
+                <li><a href="#home"><img src="img/icon_home1.png" class="icon" id="icon1" onmouseover="changeImage(this, 'img/icon_home.png')" onmouseout="changeImage(this, 'img/icon_home1.png')"></a></li>
                 <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2" onmouseover="changeImage(this, 'img/icon_reminder.png')" onmouseout="changeImage(this, 'img/icon_reminder1.png')"></a></li>
                 <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3" onmouseover="changeImage(this, 'img/icon_finance.png')" onmouseout="changeImage(this, 'img/icon_finance1.png')"></a></li>
                 <li><img src="img/icon_exit1.png" class="icon" id="icon4" onmouseover="changeImage(this, 'img/icon_exit.png')" onmouseout="changeImage(this, 'img/icon_exit1.png')"></li>
             </ul>
         </div>
-        <script>
-            let mybutton = document.getElementById("icon1");
-            function topFunction()
-            {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            }
-
-            function changeImage(element, newSrc) {
-                element.src = newSrc;
-            }
-        </script>
 <!-- home -->
         <div class="mamafloat">
             <img src="img/mama_home.png" alt="mama_home" class="mamahome">
             <section id="home" class="task d-flex flex-column">
-                <div class="box1">Yo my kids</div>
+                <div class="box1 d-flex flex-column">
+                    <div class="greet">Yo username kiddo!</div>
+                    <div class="ranq" id="quoteBox"></div>
+                </div>
                 <div class="row2 d-flex flex-row w-100 h-100">
                     <div class="column2 d-flex flex-row w-100 h-100">
                         <a href="#note" class="box-2-1" id="box">Today Tasks</a>
                         <div class="row1 d-flex flex-column w-100">
                             <div class="column3 d-flex flex-row w-100">
                                 <div class="box-3-1 w-50 h-100 " id="box"></div>
-                                <div class="box-4-1 w-50 h-100" id="box">Meal Ideas</div>
+                                <div class="box-4-1 w-50 h-100" id="box">
+                                    <div class="ranm"></div>
+                                </div>
                             </div>
                             <a href="#finance1" class="box-5-1 w-100" id="box">Balance</a>
                         </div>
@@ -121,8 +114,89 @@
                     <div class="savh2"></div>
                 </div>
             </section> 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    <script>
+        function changeImage(element, newSrc) {
+            element.src = newSrc;
+        }
+        const quotes = [
+        "You are doing better than you think.",
+        "Give yourself permission to rest.",
+        "It is okay to feel lost sometimes.",
+        "It is okay if today did not go as planned.",
+        "Self-care is how you take your power back.",
+        "It is okay to put yourself first.",
+        "Those mistakes you have made along the way are." ,"lessons, not failure.",
+        "Happiness looks good on you.",
+        "Don’t you worry.",
+        "Believe in what you prayed for.",
+        "You are too smart to worry.",
+        "Everything will be find.",
+        "Every day is a second chance.",
+        "Give some more time to yourself.",
+        "Your patient is your power.",
+        "You did very well today.",
+        "Things always get better.",
+        "You are your priority."
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quoteBox');
+            quoteElement.innerText = quotes[randomIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getRandomQuote();
+        });
+        const imageSources = [
+            "img/food1.png",
+            "img/food2.png",
+            "img/food3.png",
+            "img/food4.png",
+            "img/food5.png",
+            "img/food6.png",
+            "img/food7.png",
+            "img/food8.png",
+            "img/food9.png",
+            "img/food10.png",
+            "img/food11.png",
+            "img/food12.png",
+            "img/food13.png",
+            "img/food14.png",
+            "img/food15.png",
+            "img/food16.png",
+            "img/food17.png",
+            "img/food18.png",
+            "img/food19.png",
+            "img/food20.png",
+            "img/food21.png",
+            "img/food22.png",
+            "img/food23.png",
+            "img/food24.png",
+            "img/food25.png",
+            "img/food26.png",
+            "img/food27.png",
+            "img/food28.png",
+            "img/food29.png",
+            "img/food30.png"
+        ];
+
+        function getRandomImageSource() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            return imageSources[randomIndex];
+        }
+
+        function updateRandomImage() {
+            const ranmElement = document.querySelector('.ranm');
+            ranmElement.style.backgroundImage = `url('${getRandomImageSource()}')`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateRandomImage();
+        });
+    </script>    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
         AOS.init();
-        </script>
+    </script>
     </body>
 </html>
