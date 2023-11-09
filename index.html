@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="p-4">
+
+        <h3 class="text-center text-muted mb-4">Todo List</h3>
+        
+        <div class="row">
+            <div class="col-12  col-md-4 col-lg-4   border p-4">
+                <div >
+                    <form id="todo-form">
+                        <input id="title-input" placeholder="Enter Todo" class="form-control" required><br>
+                        <input id="date-input" type="date" class="form-control"><br>
+                        <input id="time-input" type="time" class="form-control">
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="mx-auto btn btn-primary text-nowrap">Add Todo</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-8 col-lg-8 border rounded p-4" id="todo_list">
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+
+    <script>
+
+        var count = 1
+
+        function add_todo(title,date_time){
+
+
+            document.getElementById("todo_list").innerHTML += `
+                                                            <div id='todo_${count}' class="todo-item my-2 p-4 bg-light border border-light card">
+                                                                <div class="">
+                                                                        <h4 style="float:left" class="m-0 p-0">${title}</h4>
+                                                                        <div style="float: right;">
+                                                                            <i style="cursor: pointer;" onclick='delete_todo("${count}")' class="fas text-danger fa-trash"></i>
+                                                                        </div>
+                                                                </div>
+                                                                <small class="text-muted">${date_time}</small>
+                                                        </div>
+            `
+
+            count += 1
+
+        }
+
+        function delete_todo(id){
+            $("#todo_" + id).slideUp()            
+
+
+            //ajax
+
+            setTimeout(function(){
+                $("#todo_" + id).remove()
+            },2000)
+            
+        }
+        
+        $("#todo-form").submit(function(){
+
+            var title = document.getElementById("title-input").value
+            var date_time = document.getElementById("date-input").value + " " + document.getElementById("time-input").value
+            
+            add_todo(title, date_time)
+
+            //ajax
+
+
+            document.getElementById("todo-form").reset()
+            return false
+        })
+    </script>
+</body>
+</html>
+
