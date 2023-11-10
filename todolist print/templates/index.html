@@ -24,6 +24,8 @@
             <li style="font-size: 20pt; list-style: none;" ><a href="{{ url_for('complete', id=todo.id) }}"><button></button></a>{{ todo.text }}</li>
             {% endfor %}
         </ul>
+        <h2>Total Completed Items: {{ complete|length }}</h2>
+        <h2>Total inCompleted Items: {{ incomplete|length }}</h2>
     </div>
 </body>
 </html>

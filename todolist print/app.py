@@ -33,12 +33,18 @@ def add():
 
 @app.route('/complete/<id>')
 def complete(id):
-
     todo = Todo.query.filter_by(id=int(id)).first()
     todo.complete = True
     db.session.commit()
-    
     return redirect(url_for('index'))
+def show():
+    completed = Todo.query.filter_by(complete=True).all()
+    incomplete = Todo.query.filter_by(complete=False).all()
+    db.session.commit()
+
+    print(len(completed), len(incomplete))
+    return {'completed': len(completed), 'incomplete': len(incomplete)}
+
 
 if __name__ == '__main__':
     app.run(debug=True)
