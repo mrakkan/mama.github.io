@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../static/stylehome.css">
+        <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
+    </head>
+    <body class="d-flex">
+<!-- icon -->
+        <div class= "navlist">
+            <ul class="navicon m-0 p-0 justify-content-center">
+                <li><a href="#home"><img src="../static/icon_home1.png" class="icon" id="icon1" 
+                    onmouseover="changeImage(this, '../static/icon_home.png')" 
+                    onmouseout="changeImage(this, '../static/icon_home1.png')"></a></li>
+                <li><a href="#note"><img src="../static/icon_reminder1.png" class="icon" id="icon2" 
+                    onmouseover="changeImage(this, '../static/icon_reminder.png')" 
+                    onmouseout="changeImage(this, '../static/icon_reminder1.png')"></a></li>
+                <li><a href="#finance1"><img src="../static/icon_finance1.png" class="icon" id="icon3" 
+                    onmouseover="changeImage(this, '../static/icon_finance.png')" 
+                    onmouseout="changeImage(this, '../static/icon_finance1.png')"></a></li>
+                <li><img src="../static/icon_exit1.png" class="icon" id="icon4" 
+                    onmouseover="changeImage(this, '../static/icon_exit.png')" 
+                    onmouseout="changeImage(this, '../static/icon_exit1.png')"></li>
+            </ul>
+        </div>
+<!-- home -->
+        <div class="mamafloat">
+            <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
+            <section id="home" class="task d-flex flex-column">
+                <div class="box1 d-flex flex-column" id="rad">
+                    <div class="greet">Yo username kiddo!</div>
+                    <div class="ranq" id="quoteBox"></div>
+                </div>
+                <div class="row2 d-flex flex-row w-100 h-100">
+                    <div class="column2 d-flex flex-row w-100 h-100">
+                        <a href="#note" class="box-2-1" id="box">Today Tasks</a>
+                        <div class="row1 d-flex flex-column w-100">
+                            <div class="column3 d-flex flex-row w-100">
+                                <div class="box-3-1 w-50 h-100 " id="box"></div>
+                                <div class="box-4-1 w-50 h-100">
+                                    <div class="ranm"></div>
+                                </div>
+                            </div>
+                            <a href="#finance1" class="box-5-1 w-100" id="box">Balance</a>
+                        </div>
+                        <div class="column4 d-flex flex-column h-100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- note -->
+            <section class="note d-flex flex-column" id="note">
+                <div class="notecolumn d-flex w-100 h-100">
+                    <div class="cheerupbg d-flex h-100">
+                        <div class="complete" id="rad">
+                            <p>{{ complete|length }}</p>
+                        </div>
+                        <img src="../static/mama_note.png" alt="mamanote" class="mamanote">
+                        <div class="left" id="rad">
+                            <p>{{ incomplete|length }}</p>
+                        </div>
+                    </div>
+                        <div class="notecolumn2 d-flex flex-column w-100">
+                            <div class="quote">You are getting better everyday!</div>
+                            <div class="alltasks">All Tasks
+                                <form action="{{ url_for('views.add') }}" method="POST" class="todo">
+                                    <input type="text" name="todoitem" class="insert" placeholder="what to do?"><input type="submit" value="add" class="add">
+                                                            <!-- ! -->
+                                </form>
+                                <div class="box-ul">
+                                    <br>
+                                    <ul class="ulto">
+                                        {% for todo in incomplete %}
+                                        <li style="font-size: 20pt; list-style: none;" ><a href="{{ url_for('views.complete', id=todo.id) }}"><button></button></a>{{ todo.text }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                </div>
+            </section>
+<!-- finance1 -->
+            <section class="finance1 d-flex flex-column" id="finance1">
+                <div class="uprow d-flex w-100">
+                    <div class="bal d-flex">
+                        <div class="inc1 d-flex flex-row">
+                            <img src="../static/finance_income.png" alt="income" class="income">
+                            <p>Income</p>
+                        </div>
+                        <div class="inc" id="rad"></div>
+                        <div class="out1 d-flex flex-row">
+                            <img src="../static/finance_outcome.png" alt="outcome" class="outcome">
+                            <p>Outcome</p>
+                        </div>
+                        <div class="out" id="rad"></div>
+                        <div class="sav1 d-flex flex-row">
+                            <img src="../static/finance_savings.png" alt="savings" class="savings">
+                            <p>Savings</p>
+                        </div>
+                        <div class="sav" id="rad"></div>
+                    </div>
+                    <div class="edit d-flex flex-column" id="rad">
+                        <form method="POST">
+                        <label for="income">Income</label>
+                        <input type="text" name="income" class="price" id="incomeprice" oninput="sanitizeInput(this)">
+                        <label for="outcome">Outcome</label>
+                        <input type="text" name="outcome" class="price" id="outcomeprice" oninput="sanitizeInput(this)">
+                        <label for="savings">Savings</label>
+                        <input type="text" name="savings" class="price" id="savingsprice" oninput="sanitizeInput(this)">
+                        <div class="category d-flex flex-column">
+                            <label for="savings" id="categ">Categories</label>
+                            <select id="catopt" name="categories">
+                                <option name="gas">Goods & Service</option>
+                                <option name="food">Food</option>
+                                <option name="fare">Fare</option>
+                                <option name="edu">Education</option>
+                                <option name="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="but">
+                            <!-- ! -->
+                            <button type="submit" id="fibut">Done</button>
+                        </div>
+                        </form>
+
+                    </div>
+                    <div class="cat" id="rad"></div>
+                </div>
+                <div class="downrow d-flex w-100">
+                    <div class="tea" id="rad">Save money and money will save you.</div>
+                    <a href="#finance2" class="his" id="box">
+                        History
+                    </a>
+                    </div>
+                </div>
+            </section>
+<!-- finance2 -->
+            <section class="finance2 d-flex" id="finance2">
+                <div class="inch d-flex flex-column">
+                    <div class="inch1 d-flex flex-row">
+                        <img src="../static/finance_income.png" alt="income" class="income">
+                        <p>Income</p>
+                    </div>
+                    <div class="inch2" id="rad"></div>
+                </div>
+                <div class="outh d-flex flex-column">
+                    <div class="outh1 d-flex flex-row">
+                        <img src="../static/finance_outcome.png" alt="outcome" class="outcome">
+                        <p>Outcome</p>
+                    </div>
+                    <div class="outh2" id="rad"></div>
+                </div>
+                <div class="savh d-flex flex-column">
+                    <div class="savh1 d-flex flex-row">
+                        <img src="../static/finance_savings.png" alt="savings" class="savings">
+                        <p>Savings</p>
+                    </div>
+                    <div class="savh2" id="rad"></div>
+                </div>
+            </section> 
+    <script>
+        function changeImage(element, newSrc) {
+            element.src = newSrc;
+        }
+        const quotes = [
+        "You are doing better than you think.",
+        "Give yourself permission to rest.",
+        "It is okay to feel lost sometimes.",
+        "It is okay if today did not go as planned.",
+        "Self-care is how you take your power back.",
+        "It is okay to put yourself first.",
+        "Those mistakes you have made along the way are." ,"lessons, not failure.",
+        "Happiness looks good on you.",
+        "Don’t you worry.",
+        "Believe in what you prayed for.",
+        "You are too smart to worry.",
+        "Everything will be fine.",
+        "Every day is a second chance.",
+        "Give some more time to yourself.",
+        "Your patient is your power.",
+        "You did very well today.",
+        "Things always get better.",
+        "You are your priority."
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quoteBox');
+            quoteElement.innerText = quotes[randomIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getRandomQuote();
+        });
+        const imageSources = [
+            "../static/food1.png",
+            "../static/food2.png",
+            "../static/food3.png",
+            "../static/food4.png",
+            "../static/food5.png",
+            "../static/food6.png",
+            "../static/food7.png",
+            "../static/food8.png",
+            "../static/food9.png",
+            "../static/food10.png",
+            "../static/food11.png",
+            "../static/food12.png",
+            "../static/food13.png",
+            "../static/food14.png",
+            "../static/food15.png",
+            "../static/food16.png",
+            "../static/food17.png",
+            "../static/food18.png",
+            "../static/food19.png",
+            "../static/food20.png",
+            "../static/food21.png",
+            "../static/food22.png",
+            "../static/food23.png",
+            "../static/food24.png",
+            "../static/food25.png",
+            "../static/food26.png",
+            "../static/food27.png",
+            "../static/food28.png",
+            "../static/food29.png",
+            "../static/food30.png"
+        ];
+
+        function getRandomImageSource() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            return imageSources[randomIndex];
+        }
+
+        function updateRandomImage() {
+            const ranmElement = document.querySelector('.ranm');
+            ranmElement.style.backgroundImage = `url('${getRandomImageSource()}')`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateRandomImage();
+        });
+        setInterval(updateRandomImage, 300000);
+
+        function sanitizeInput(input) {
+            let sanitizedValue = input.value.replace(/[^0-9.]/g, '');
+
+            if (sanitizedValue.trim() !== '' && !isNumeric(sanitizedValue)) {
+                alert('Please enter a valid numeric value.');
+                input.value = '';
+            } else {
+                input.value = sanitizedValue;
+            }
+        }
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+        const outcomePriceInput = document.getElementById('outcomeprice');
+        const categLabel = document.getElementById('categ');
+        const catoptSelect = document.getElementById('catopt');
+
+        outcomePriceInput.addEventListener('input', function () {
+            if (outcomePriceInput.value.trim() !== '') {
+                categLabel.style.display = 'block';
+                catoptSelect.style.display = 'block';
+            } else {
+                categLabel.style.display = 'none';
+                catoptSelect.style.display = 'none';
+            }
+        });
+    });
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        AOS.init();
+    </script>
+    </body>
+</html>
