@@ -712,7 +712,7 @@
         .finance2{
             flex-direction: column;
             padding-left: 0;
-            height: 89vh;
+            height: 400vh;
             padding-top: 0;
             margin-bottom: 8vh;
         }
@@ -734,34 +734,34 @@
         .inch1{
             margin-top: 0;
             margin-bottom: 1vh;
-            height: 20%;
+            height: 6%;
             font-size: 4vh;
         }
         .outh1{
-            margin-top: 0;
+            margin-top: 6vh;
             margin-bottom: 1vh;
-            height: 20%;
+            height: 6%;
             font-size: 4vh;
         }
         .savh1{
-            margin-top: 0;
+            margin-top: 6vh;
             margin-bottom: 1vh;
-            height: 20%;
+            height: 6%;
             font-size: 4vh;
         }
         .inch2{
             margin-top: 0;
-            height: 80%;
+            height: 94%;
             font-size: 2.5vh;
         }
         .outh2{
             margin-top: 0;
-            height: 80%;
+            height: 94%;
             font-size: 4vh;
         }
         .savh2{
             margin-top: 0;
-            height: 80%;
+            height: 94%;
             font-size: 4vh;
         }
     }
@@ -796,4 +796,8 @@
     width: 50%;
     background-color: #FDD;
     overflow: auto;
+}
+.navlist::after{
+    content: "";
+    background-color: black;
 }
