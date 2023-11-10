@@ -1,15 +1,11 @@
+from . import db
+from .model import User
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 
-from .model import User, Note
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_user, login_required, logout_user
 
-from . import db
-
-from flask_login import UserMixin, login_user, login_required, logout_user, current_user
 # from flask_login import *
-
-
-
 
 
 auth = Blueprint('auth', __name__)
@@ -25,10 +21,10 @@ def login():
         if user_email_check:
             if check_password_hash(user_email_check.password, password):
                 flash('Logged in successfully.', category='success')
-                ##
+
                 login_user(user_email_check, remember=True) # remember=False ก็คือไม่ต้องจำก็ได้
-                ##
                 # login_user(user_email_check, remember=False)
+
                 return redirect(url_for('views.home')) # flask 3 redirect() เหมือนจะไม่มี (,response)
             else:
                 flash('Incorrect password, please try again.', category='error')
@@ -38,13 +34,14 @@ def login():
     return render_template('login.html')
 
 
-## ตอนนี้ยังไม่มีให้กด log out ##
+## ! ตอนนี้ยังไม่มีให้กด log out ##
 @auth.route('/logout')
-@login_required # ต้อง logged in ก่อนถึงจะ logout ได้   ########################
+@login_required
 def logout():
 
     logout_user()
     return redirect(url_for('auth.login'))
+## ! ##
 
 
 
@@ -56,7 +53,7 @@ def sign_up():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user_email_check = User.query.filter_by(email=email).first() ##########################
+        user_email_check = User.query.filter_by(email=email).first()
 
         if user_email_check:
             flash('Email already exist.', category='error')
@@ -74,12 +71,8 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
 
-            # login_user(user_email_check, remember=True) # remember=False ไม่ต้องจำก็ได้
-            login_user(new_user, remember=True)
+            login_user(new_user, remember=True) # remember=False ไม่ต้องจำก็ได้
             # login_user(user_email_check, remember=False)
-
-
-
 
             flash('Account created', category='success')
             return redirect(url_for('auth.login'))
@@ -87,3 +80,5 @@ def sign_up():
 
 
     return render_template('signup.html')
+
+

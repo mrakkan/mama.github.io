@@ -1,14 +1,12 @@
-'''เปลี่ยนชื่อไฟล์แล้วมาเปลี่ยนตัวแปรไฟล์นี้ด้วย'''
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
-from os import path
+from os import path # ! ห้ามลบ
 
 
 db = SQLAlchemy()
-DB_NAME = 'database.db'
+DB_NAME = 'database_withfinance.db'
 
 def create_app():
     app = Flask(__name__)
@@ -32,7 +30,7 @@ def create_app():
         db.create_all()
 ###
 
-    ### อันนี้ไม่รู้คือไรเหมือนกัน ###
+#### * START flask_login ####
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
@@ -40,13 +38,13 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
-        
 
     return app
+#### * END flask_login ####
 
 ### def create_database(app): & db.create_all(app=app) ใช้ไม่ได้ ทำไมไม่รู้(อีกละ)
 ### มันให้เอา parameter : app ออก
-def create_database(): # <= def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all() # <= db.create_all(app=app)
-        print('created database')
+# def create_database(): # <= def create_database(app):
+#     if not path.exists('website/' + DB_NAME):
+#         db.create_all() # <= db.create_all(app=app)
+#         print('created database')
