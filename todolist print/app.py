@@ -21,7 +21,7 @@ def index():
     incomplete = Todo.query.filter_by(complete=False).all()
     complete = Todo.query.filter_by(complete=True).all()
 
-    return render_template('index.html', incomplete=incomplete, complete=complete)
+    return render_template('home.html', incomplete=incomplete, complete=complete)
 
 @app.route('/add', methods=['POST'])
 def add():
