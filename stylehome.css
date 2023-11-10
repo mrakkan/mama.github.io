@@ -1,9 +1,9 @@
 *{
     font-family: "Oduda Bold";
-    color: #3A305A;
+    color: #582b13;
     }
     body{
-        background: radial-gradient(circle, rgba(255, 202, 217, 0.799), #fff6ec48, #FFF6EC);
+        background: radial-gradient(circle, #ffbb96, #ffeee5, #FFF6EC);
         background-attachment: fixed;
         padding: 3vh;
         padding-top: 0;
@@ -26,7 +26,7 @@
     .navlist{
         width: 6rem;
         height: 95%;
-        background-color: #FDD;
+        background-color: #fbac81;
         border-radius: 3rem;
         padding: 3rem;
         margin-top: 3vh;
@@ -43,7 +43,9 @@
         transform: scale(1.2);
     }
     .box1{
-        background-color: #fff;
+        background: url(img/greet.png);
+        background-position: center;
+        background-size: cover;
         height: 40%;
         margin-bottom: 3vh;
         border-radius: 3rem;
@@ -52,6 +54,7 @@
         width: 100%;
         padding: 2vh;
         padding-left: 4vh;
+        color: #582b13;
     }
     .ranq{
         font-size: 5vh;
@@ -66,7 +69,7 @@
         padding: 2vh;
         padding-left: 4vh;
         text-decoration: none;
-        color: #3A305A;
+        color: #582b13;
     }
     .box-3-1{
         background-color: #fff;
@@ -79,10 +82,11 @@
     }
     .ranm{
         background-position: center;
-        background-size: 70%;
+        background-size: 65%;
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
+        transition: background-image .5s ease-in-out;
     }
     .column3{
         margin-bottom: 3vh;
@@ -97,7 +101,7 @@
         padding-left: 4vh;
         height: 100%;
         text-decoration: none;
-        color: #3A305A;
+        color: #582b13;
     }
     .row1{
         margin-right: 3vh;
@@ -280,8 +284,59 @@
         background-color: #fff;
         width: 36%;
         border-radius: 3rem;
-        height: 60%;
+        height: 100%;
         margin-right: 3vh;
+        font-size: 4vh;
+        padding: 4vh;
+    }
+    .edit select{
+        width: 97%;
+        height: 7vh;
+        padding: 2vh;
+        margin: 1vh;
+        border: 1px solid #d9d9d9;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        font-size: 2.5vh;
+    }
+    .price{
+        width: 97%;
+        height: 7vh;
+        padding: 2vh;
+        border: 1px solid #d9d9d9;
+        border-radius: 1rem;
+        font-size: 2.5vh;
+        margin: 1vh;
+    }
+    .category{
+        text-align: center;
+    }
+    #categ{
+        text-align: start;
+        display: none;
+    }
+    #catopt{
+        display: none;
+    }
+    .but{
+        text-align: center;
+        margin-top: 2vh;
+        padding: 1vh;
+    }
+    #fibut{
+        background-color: #ffbb96;
+        width: 40%;
+        padding: 2vh;
+        border: transparent;
+        border-radius: 2rem;
+        font-size: 4vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        border: none;
+    }
+    #fibut:hover{
+        color: #FFF6EC;
+        background-color: #582b13;
     }
     .cat{
         background-color: #fff;
@@ -307,7 +362,7 @@
         text-align: center;
         padding: 3vh;
         font-size: 4.5vh;
-        color: #3A305A;
+        color: #582b13;
         text-decoration: none;
     }
     .finance2{
@@ -381,9 +436,12 @@
         #box{
             border-radius: 2rem;
         }
+        #rad, .box-4-1{
+            border-radius: 2rem;
+        }
         body{
             flex-direction: column;
-            flex: 100%;  
+            flex: 100%;
         }
         .navicon{
             flex-direction: row;
@@ -550,6 +608,38 @@
             margin-bottom: 3vh;
             width: 100%;
             height: 35%;
+            font-size: 3vh;
+            padding: 2vh;
+        }
+        .edit select{
+            width: 97%;
+            height: 7vh;
+            padding: 2vh;
+            margin: 1vh;
+            border: 1px solid #d9d9d9;
+            border-radius: 1rem;
+            box-sizing: border-box;
+            font-size: 2.5vh;
+        }
+        .price{
+            width: 97%;
+            height: 7vh;
+            padding: 2vh;
+            border: 1px solid #d9d9d9;
+            border-radius: 1rem;
+            font-size: 2.5vh;
+            margin: 1vh;
+        }
+        .category{
+            text-align: center;
+        }
+        .but{
+            text-align: center;
+        }
+        #fibut{
+            padding: 0;
+            height: 7vh;
+            font-size: 3vh;
         }
         .cat{
             width: 100%;
