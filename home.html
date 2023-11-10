@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="bootstrap tp/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="stylehome.css">
         <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
@@ -13,15 +13,15 @@
 <!-- icon -->
         <div class= "navlist">
             <ul class="navicon m-0 p-0 justify-content-center">
-                <li><a href="#home"><img src="img/icon_home1.png" class="icon" id="icon1" onmouseover="changeImage(this, 'img/icon_home.png')" onmouseout="changeImage(this, 'img/icon_home1.png')"></a></li>
-                <li><a href="#note"><img src="img/icon_reminder1.png" class="icon" id="icon2" onmouseover="changeImage(this, 'img/icon_reminder.png')" onmouseout="changeImage(this, 'img/icon_reminder1.png')"></a></li>
-                <li><a href="#finance1"><img src="img/icon_finance1.png" class="icon" id="icon3" onmouseover="changeImage(this, 'img/icon_finance.png')" onmouseout="changeImage(this, 'img/icon_finance1.png')"></a></li>
-                <li><img src="img/icon_exit1.png" class="icon" id="icon4" onmouseover="changeImage(this, 'img/icon_exit.png')" onmouseout="changeImage(this, 'img/icon_exit1.png')"></li>
+                <li><a href="#home"><img src="../static/icon_home1.png" class="icon" id="icon1" onmouseover="changeImage(this, '../static/icon_home.png')" onmouseout="changeImage(this, '../static/icon_home1.png')"></a></li>
+                <li><a href="#note"><img src="../static/icon_reminder1.png" class="icon" id="icon2" onmouseover="changeImage(this, '../static/icon_reminder.png')" onmouseout="changeImage(this, '../static/icon_reminder1.png')"></a></li>
+                <li><a href="#finance1"><img src="../static/icon_finance1.png" class="icon" id="icon3" onmouseover="changeImage(this, '../static/icon_finance.png')" onmouseout="changeImage(this, '../static/icon_finance1.png')"></a></li>
+                <li><img src="../static/icon_exit1.png" class="icon" id="icon4" onmouseover="changeImage(this, '../static/icon_exit.png')" onmouseout="changeImage(this, '../static/icon_exit1.png')"></li>
             </ul>
         </div>
 <!-- home -->
         <div class="mamafloat">
-            <img src="img/mama_home.png" alt="mama_home" class="mamahome">
+            <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
             <section id="home" class="task d-flex flex-column">
                 <div class="box1 d-flex flex-column">
                     <div class="greet">Yo username kiddo!</div>
@@ -50,12 +50,27 @@
                 <div class="notecolumn d-flex w-100 h-100">
                     <div class="cheerupbg d-flex">
                         <div class="complete"></div>
-                        <img src="img/mamanote.png" alt="mamanote" class="mamanote">
+                        <img src="../static/mamanote.png" alt="mamanote" class="mamanote">
                         <div class="left"></div>
                     </div>
                         <div class="notecolumn2 d-flex flex-column w-100">
                             <div class="quote">You are getting better everyday!</div>
-                            <div class="alltasks">All Tasks</div>
+                            <div class="alltasks">All Tasks
+                                <form action="{{ url_for('add') }}" method="POST" class="todo">
+                                    <input type="text" name="todoitem" class="insert" placeholder="what to do?"><input type="submit" value="add" class="add">
+                                
+                                </form>
+                                <div class="box-ul">
+                                    <br>
+                                    <ul class="ulto">
+                                        {% for todo in incomplete %}
+                                        <li style="font-size: 20pt; list-style: none;" ><a href="{{ url_for('complete', id=todo.id) }}"><button></button></a>{{ todo.text }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            
+
                         </div>
                 </div>
             </section>
@@ -64,17 +79,17 @@
                 <div class="uprow d-flex w-100">
                     <div class="bal d-flex">
                         <div class="inc1 d-flex flex-row">
-                            <img src="img/income.png" alt="income" class="income">
+                            <img src="../static/income.png" alt="income" class="income">
                             <p>Income</p>
                         </div>
                         <div class="inc"></div>
                         <div class="out1 d-flex flex-row">
-                            <img src="img/outcome.png" alt="outcome" class="outcome">
+                            <img src="../static/outcome.png" alt="outcome" class="outcome">
                             <p>Outcome</p>
                         </div>
                         <div class="out"></div>
                         <div class="sav1 d-flex flex-row">
-                            <img src="img/savings.png" alt="savings" class="savings">
+                            <img src="../static/savings.png" alt="savings" class="savings">
                             <p>Savings</p>
                         </div>
                         <div class="sav"></div>
@@ -94,21 +109,21 @@
             <section class="finance2 d-flex" id="finance2">
                 <div class="inch d-flex flex-column">
                     <div class="inch1 d-flex flex-row">
-                        <img src="img/income.png" alt="income" class="income">
+                        <img src="../static/income.png" alt="income" class="income">
                         <p>Income</p>
                     </div>
                     <div class="inch2"></div>
                 </div>
                 <div class="outh d-flex flex-column">
                     <div class="outh1 d-flex flex-row">
-                        <img src="img/outcome.png" alt="outcome" class="outcome">
+                        <img src="../static/outcome.png" alt="outcome" class="outcome">
                         <p>Outcome</p>
                     </div>
                     <div class="outh2"></div>
                 </div>
                 <div class="savh d-flex flex-column">
                     <div class="savh1 d-flex flex-row">
-                        <img src="img/savings.png" alt="savings" class="savings">
+                        <img src="../static/savings.png" alt="savings" class="savings">
                         <p>Savings</p>
                     </div>
                     <div class="savh2"></div>

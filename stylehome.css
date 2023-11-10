@@ -655,3 +655,35 @@
             font-size: 4vh;
         }
     }
+.alltasks{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.insert{
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: solid;
+}
+.add{
+    border-radius: 20px;
+    font-size: 5vh;
+    padding: 7px;
+    margin-left: 15px;
+}
+.box-ul{
+    display: flex;
+    height: 80%;
+    align-content: flex-start;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+.ulto{
+    border-radius: 30px;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    background-color: #FDD;
+    overflow: auto;
+}
