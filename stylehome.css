@@ -163,7 +163,7 @@
         height: 100%;
     }
     .quote{
-        background-color: #fff;
+        background-color: #fbac81;
         border-radius: 3rem;
         margin-bottom: 3vh;
         height: 10%;
@@ -176,20 +176,39 @@
         width: 14%;
     }
     .complete{
-        background-color: #e0f2ee;
+        background: url(img/complete.png);
+        background-position: center;
+        background-size: cover;
         border-radius: 3rem;
         width: 100%;
         height: 50%;
         z-index: 1;
         margin-top: 20vh;
+        text-align: center;
+        padding: 2vh;
+    }
+    .complete p{
+        color: #FFF6EC;
+        text-shadow: 0 0 10px rgb(255, 221, 120), 0 0 20px #FFF6EC, 0 0 30px rgb(255, 38, 0);
+        font-size: 18vh;
+
     }
     .left {
-        background-color: rgb(255, 248, 223);
+        background: url(img/5686651.jpg);
+        background-position: center;
+        background-size: cover;
         border-radius: 3rem;
         width: 100%;
         height: 50%;
         margin-top: 4vh;
         z-index: 1;
+        text-align: center;
+        padding: 2vh;
+    }
+    .left p{
+        color: #582b13;
+        text-shadow: 0 0 10px #582b13, 0 0 20px rgb(217, 184, 146), 0 0 30px rgb(178, 87, 17);
+        font-size: 18vh;
     }
     .alltasks{
         background-color: #fff;
@@ -536,7 +555,7 @@
         .note{
             width: 100%;
             padding-left: 0;
-            height: 88.8vh;
+            height: 130vh;
         }
         .quote{
             font-size: 2.5vh;
@@ -552,19 +571,20 @@
             width: 100%;
             margin-bottom: 3vh;
             margin-right: 0;
-            flex-direction: row;
             padding: 3vh;
         }
         .complete{
-            width: 50%;
-            height: 100%;
             margin-top: 0;
-            margin-right: 3vh;
+            margin-bottom: 3vh;
+        }
+        .complete p{
+            font-size: 15vh;
         }
         .left {
-            width: 50%;
-            height: 100%;
             margin-top: 0;
+        }
+        .left p{
+            font-size: 15vh;
         }
         /* finance */
         .tea{
