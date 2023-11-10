@@ -23,7 +23,7 @@
         <div class="mamafloat">
             <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
             <section id="home" class="task d-flex flex-column">
-                <div class="box1 d-flex flex-column">
+                <div class="box1 d-flex flex-column" id="rad">
                     <div class="greet">Yo username kiddo!</div>
                     <div class="ranq" id="quoteBox"></div>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="row1 d-flex flex-column w-100">
                             <div class="column3 d-flex flex-row w-100">
                                 <div class="box-3-1 w-50 h-100 " id="box"></div>
-                                <div class="box-4-1 w-50 h-100" id="box">
+                                <div class="box-4-1 w-50 h-100">
                                     <div class="ranm"></div>
                                 </div>
                             </div>
@@ -82,23 +82,43 @@
                             <img src="../static/income.png" alt="income" class="income">
                             <p>Income</p>
                         </div>
-                        <div class="inc"></div>
+                        <div class="inc" id="rad"></div>
                         <div class="out1 d-flex flex-row">
                             <img src="../static/outcome.png" alt="outcome" class="outcome">
                             <p>Outcome</p>
                         </div>
-                        <div class="out"></div>
+                        <div class="out" id="rad"></div>
                         <div class="sav1 d-flex flex-row">
                             <img src="../static/savings.png" alt="savings" class="savings">
                             <p>Savings</p>
                         </div>
-                        <div class="sav"></div>
+                        <div class="sav" id="rad"></div>
                     </div>
-                    <div class="edit"></div>
-                    <div class="cat"></div>
+                    <div class="edit d-flex flex-column" id="rad">
+                        <label for="income">Income</label>
+                        <input type="text" name="incomeprice" class="price" id="incomeprice" oninput="sanitizeInput(this)">
+                        <label for="outcome">Outcome</label>
+                        <input type="text" name="outcomeprice" class="price" id="outcomeprice" oninput="sanitizeInput(this)">
+                        <label for="savings">Savings</label>
+                        <input type="text" name="savingsprice" class="price" id="savingsprice" oninput="sanitizeInput(this)">
+                        <div class="category d-flex flex-column">
+                            <label for="savings" id="categ">Categories</label>
+                            <select id="catopt" name="catopt">
+                                <option value="gas">Goods & Service</option>
+                                <option value="food">Food</option>
+                                <option value="fare">Fare</option>
+                                <option value="edu">Education</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="but">
+                            <button type="button" id="fibut">Done</button>
+                        </div>
+                    </div>
+                    <div class="cat" id="rad"></div>
                 </div>
                 <div class="downrow d-flex w-100">
-                    <div class="tea">Save money and money will save you.</div>
+                    <div class="tea" id="rad">Save money and money will save you.</div>
                     <a href="#finance2" class="his" id="box">
                         History
                     </a>
@@ -112,21 +132,21 @@
                         <img src="../static/income.png" alt="income" class="income">
                         <p>Income</p>
                     </div>
-                    <div class="inch2"></div>
+                    <div class="inch2" id="rad"></div>
                 </div>
                 <div class="outh d-flex flex-column">
                     <div class="outh1 d-flex flex-row">
                         <img src="../static/outcome.png" alt="outcome" class="outcome">
                         <p>Outcome</p>
                     </div>
-                    <div class="outh2"></div>
+                    <div class="outh2" id="rad"></div>
                 </div>
                 <div class="savh d-flex flex-column">
                     <div class="savh1 d-flex flex-row">
                         <img src="../static/savings.png" alt="savings" class="savings">
                         <p>Savings</p>
                     </div>
-                    <div class="savh2"></div>
+                    <div class="savh2" id="rad"></div>
                 </div>
             </section> 
     <script>
@@ -145,7 +165,7 @@
         "Don’t you worry.",
         "Believe in what you prayed for.",
         "You are too smart to worry.",
-        "Everything will be find.",
+        "Everything will be fine.",
         "Every day is a second chance.",
         "Give some more time to yourself.",
         "Your patient is your power.",
@@ -209,7 +229,37 @@
         document.addEventListener('DOMContentLoaded', function () {
             updateRandomImage();
         });
-    </script>    
+        setInterval(updateRandomImage, 300000);
+
+        function sanitizeInput(input) {
+            let sanitizedValue = input.value.replace(/[^0-9.]/g, '');
+
+            if (sanitizedValue.trim() !== '' && !isNumeric(sanitizedValue)) {
+                alert('Please enter a valid numeric value.');
+                input.value = '';
+            } else {
+                input.value = sanitizedValue;
+            }
+        }
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+        const outcomePriceInput = document.getElementById('outcomeprice');
+        const categLabel = document.getElementById('categ');
+        const catoptSelect = document.getElementById('catopt');
+
+        outcomePriceInput.addEventListener('input', function () {
+            if (outcomePriceInput.value.trim() !== '') {
+                categLabel.style.display = 'block';
+                catoptSelect.style.display = 'block';
+            } else {
+                categLabel.style.display = 'none';
+                catoptSelect.style.display = 'none';
+            }
+        });
+    });
+        </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
         AOS.init();
     </script>
