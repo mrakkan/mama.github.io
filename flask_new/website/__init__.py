@@ -6,7 +6,7 @@ from os import path # ! ห้ามลบ
 
 
 db = SQLAlchemy()
-DB_NAME = 'database_finance_todolist.db'
+DB_NAME = 'database_finance_todolist3.db'
 
 def create_app():
     app = Flask(__name__)
