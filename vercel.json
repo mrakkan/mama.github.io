@@ -1,5 +1,5 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/todolist_print/app" }
+      { "source": "/(.*)", "destination": "/todolist_print/index" }
     ]
   }
