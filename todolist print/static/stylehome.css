@@ -1,0 +1,840 @@
+*{
+    font-family: "Oduda Bold";
+    color: #582b13;
+    }
+    body{
+        background: radial-gradient(circle, #ffbb96, #ffeee5, #FFF6EC);
+        background-attachment: fixed;
+        padding: 3vh;
+        padding-top: 0;
+        flex-direction: column;
+        background-position: center;
+    }
+    .task{
+        height: 97.6vh;
+        padding-left: 8rem;
+        width: 100%;
+        padding-top: 3vh;
+    }
+    .navicon{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navlist{
+        width: 6rem;
+        height: 95%;
+        background-color: #fbac81;
+        border-radius: 3rem;
+        padding: 3rem;
+        margin-top: 3vh;
+        position: fixed;
+        z-index: 1000;
+    }
+    .icon{
+        margin: 8vh;
+        width: 5vh;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .icon:hover{
+        transform: scale(1.2);
+    }
+    .box1{
+        background: url(img/greet.png);
+        background-position: center;
+        background-size: cover;
+        height: 40%;
+        margin-bottom: 3vh;
+        border-radius: 3rem;
+        text-align: start;
+        font-size: 8vh;
+        width: 100%;
+        padding: 2vh;
+        padding-left: 4vh;
+        color: #582b13;
+    }
+    .ranq{
+        font-size: 5vh;
+    }
+    .box-2-1{
+        background-color: #fff;
+        width: 55%;
+        border-radius: 3rem;
+        margin-right: 3vh;
+        height: 100%;
+        font-size: 4vh;
+        padding: 2vh;
+        padding-left: 4vh;
+        text-decoration: none;
+        color: #582b13;
+    }
+    .box-3-1{
+        background-color: #fff;
+        border-radius: 3rem;
+    }
+    .box-4-1{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-left: 3vh;
+    }
+    .ranm{
+        background-position: center;
+        background-size: 65%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        transition: background-image .5s ease-in-out;
+    }
+    .column3{
+        margin-bottom: 3vh;
+        height: 100%;
+    }
+    .box-5-1{
+        background-color: #fff;
+        border-radius: 3rem;
+        text-align: start;
+        font-size: 4vh;
+        padding: 2vh;
+        padding-left: 4vh;
+        height: 100%;
+        text-decoration: none;
+        color: #582b13;
+    }
+    .row1{
+        margin-right: 3vh;
+        height: 100%;
+    }
+    .row2{
+        width: 40vh;
+    }
+    .column2{
+        width: 70%;
+    }
+    #box{
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    #box:hover{
+        transition: 0.5s;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.148);
+    }
+    .column4{
+        width: 45%;
+        height: 50%;
+    }
+    .mamahome{
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .mamafloat{
+        position: relative;
+        height: 94.6vh;
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+    .main{
+        height: 100vh;
+    }
+    /* note */
+    .note{
+        position: relative;
+        padding-top: 3vh;
+        height: 98vh;
+        padding-left: 8rem;
+        width: 100%;
+    }
+    .notecolumn{
+        flex-direction: row;
+    }
+    .cheerupbg{
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-right: 3vh;
+        height: 100%;
+        padding: 4vh;
+        width: 35%;
+        align-items: center;
+    }
+    .notecolumn2{
+        height: 100%;
+    }
+    .quote{
+        background-color: #fbac81;
+        border-radius: 3rem;
+        margin-bottom: 3vh;
+        height: 10%;
+        font-size: 4.5vh;
+        padding: 1vh;
+        text-align: center;
+    }
+    .mamanote{
+        position: absolute;
+        width: 14%;
+    }
+    .complete{
+        background: url(img/complete.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 3rem;
+        width: 100%;
+        height: 50%;
+        z-index: 1;
+        margin-top: 20vh;
+        text-align: center;
+        padding: 2vh;
+    }
+    .complete p{
+        color: #FFF6EC;
+        text-shadow: 0 0 10px rgb(255, 221, 120), 0 0 20px #FFF6EC, 0 0 30px rgb(255, 38, 0);
+        font-size: 18vh;
+
+    }
+    .left {
+        background: url(img/5686651.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 3rem;
+        width: 100%;
+        height: 50%;
+        margin-top: 4vh;
+        z-index: 1;
+        text-align: center;
+        padding: 2vh;
+    }
+    .left p{
+        color: #582b13;
+        text-shadow: 0 0 10px #582b13, 0 0 20px rgb(217, 184, 146), 0 0 30px rgb(178, 87, 17);
+        font-size: 18vh;
+    }
+    .alltasks{
+        background-color: #fff;
+        border-radius: 3rem;
+        padding: 2vh;
+        font-size: 5vh;
+        text-align: center;
+        height: 90%;
+    }
+    /* finance1 */
+    .finance1{
+        height: 97.5vh;
+        padding-left: 8rem;
+        width: 100%;
+        padding-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .uprow{
+        height: 85%;
+        align-items: center;
+        margin-bottom: 3vh;
+        flex-direction: row;
+    }
+    .downrow{
+        flex-direction: row;
+        height: 15%;
+    }
+    .bal{
+        margin-bottom: 3vh;
+        margin-right: 3vh;
+        height: 100%;
+        width: 25%;
+        z-index: 1;
+        flex-direction: column;
+    }
+    .inc{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    .out{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    .sav{
+        background-color: #fff;
+        width: 100%;
+        border-radius: 3rem;
+        height: 30%;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 4.5vh;
+    }
+    .inc1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .income{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh;
+    }
+    .out1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .outcome{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh
+    }
+    .sav1{
+        width: 100%;
+        height: 10%;
+        font-size: 4vh;
+    }
+    .savings{
+        margin-top: 1vh;
+        margin-right: 2vh;
+        width: 5vh;
+        height: 5vh
+    }
+    .edit{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 100%;
+        margin-right: 3vh;
+        font-size: 4vh;
+        padding: 4vh;
+    }
+    .edit select{
+        width: 97%;
+        height: 7vh;
+        padding: 2vh;
+        margin: 1vh;
+        border: 1px solid #d9d9d9;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        font-size: 2.5vh;
+    }
+    .price{
+        width: 97%;
+        height: 7vh;
+        padding: 2vh;
+        border: 1px solid #d9d9d9;
+        border-radius: 1rem;
+        font-size: 2.5vh;
+        margin: 1vh;
+    }
+    .category{
+        text-align: center;
+    }
+    #categ{
+        text-align: start;
+        display: none;
+    }
+    #catopt{
+        display: none;
+    }
+    .but{
+        text-align: center;
+        margin-top: 2vh;
+        padding: 1vh;
+    }
+    #fibut{
+        background-color: #ffbb96;
+        width: 40%;
+        padding: 2vh;
+        border: transparent;
+        border-radius: 2rem;
+        font-size: 4vh;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        border: none;
+    }
+    #fibut:hover{
+        color: #FFF6EC;
+        background-color: #582b13;
+    }
+    .cat{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 100%;
+    }
+    .tea{
+        background-color: #fff;
+        width: 64%;
+        border-radius: 3rem;
+        height: 100%;
+        margin-right: 3vh;
+        text-align: center;
+        padding-top: 3vh;
+        font-size: 4.5vh;
+    }
+    .his{
+        background-color: #fff;
+        width: 36%;
+        border-radius: 3rem;
+        height: 100%;
+        text-align: center;
+        padding: 3vh;
+        font-size: 4.5vh;
+        color: #582b13;
+        text-decoration: none;
+    }
+    .finance2{
+        height: 97.5vh;
+        padding-left: 8rem;
+        width: 100%;
+        padding-top: 3vh;
+        flex-direction: row;
+    }
+    .inch{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .outh{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .savh{
+        height: 100%;
+        width: 35%;
+        margin-right: 3vh;
+    }
+    .inch1{
+        border-radius: 3rem;
+        height: 7%;
+        width: 100%;
+        font-size: 5vh;
+        padding: .5vh;
+        text-align: center;
+    }
+    .inch2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    .outh1{
+        border-radius: 3rem;
+        height: 7%;
+        width: 100%;
+        font-size: 5vh;
+        padding: .5vh;
+        text-align: center;
+    }
+    .outh2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    .savh1{
+        border-radius: 3rem;
+        height: 7%;
+        font-size: 5vh;
+        width: 100%;
+        padding: .5vh;
+        text-align: center;
+    }
+    .savh2{
+        background-color: #fff;
+        border-radius: 3rem;
+        margin-top: 3vh;
+        height: 95%;
+        width: 100%;
+    }
+    #todo{
+        height: 98vh;
+    }
+    @media (max-width: 900px){
+        .main{
+            height: 100vh;
+            overflow: visible;
+        }
+        #todo{
+            height: 160vh;
+        }
+        .task{
+            padding-top: 0;
+        }
+        #box{
+            border-radius: 2rem;
+        }
+        #rad, .box-4-1{
+            border-radius: 2rem;
+        }
+        body{
+            flex-direction: column;
+            flex: 100%;
+        }
+        .navicon{
+            flex-direction: row;
+            height: 100%;
+        }
+        .navlist{
+            width: 95%;
+            height: 8vh;
+            margin-right: 0;
+            padding: 0vh;
+            bottom: 1.5%;
+            position: fixed;
+            right: 2.5%;
+        }
+        .icon{
+            margin: 3vh;
+            width: 4vh;
+        }
+        .task{
+            height: 85vh;
+            padding-left: 0;
+        }
+        .row2{
+            flex-direction: column;
+            flex: 100%;
+            flex-wrap: wrap;
+        }
+        .row1{
+            margin-right: 0;
+            height: 60%;
+        }
+        .column2{
+            flex-direction: column;
+            flex: 100%;
+            flex-wrap: wrap;
+            height: 70%;
+        }
+        .box1{
+            justify-content: center;
+            text-align: center;
+            height: 20%;
+            font-size: 3vh;
+            padding-left: 2vh;
+        }
+        .ranq{
+            font-size: 2.5vh;
+        }
+        .box-2-1{
+            width: 100%;
+            height: 40%;
+            margin-right: 0;
+            margin-bottom: 3vh;
+            font-size: 2.5vh;
+            padding-left: 2vh;
+        }
+        .column4{
+            position: absolute;
+            z-index: -1;
+        }
+        .boxpage2-1{
+            background-color: #fff;
+        }
+        .mamahome{
+            display: none;
+        }
+        .mamafloat{
+            height: 85vh;
+            padding-left: 0;
+        }
+        .box-6-1{
+            height: 25%;
+        }
+        .column3{
+            height: 42%;
+        }
+        .box-5-1{
+            font-size: 2.5vh;
+            height: 43%;
+            margin-bottom: 3vh;
+            padding-left: 2vh;
+        }
+        /* note */
+        .mamanote{
+            display: none;
+        }
+        .notecolumn{
+            flex-direction: column;
+        }
+        .cheerup{
+            display: none;
+        }
+        .note{
+            width: 100%;
+            padding-left: 0;
+            height: 100vh;
+        }
+        .quote{
+            font-size: 2.5vh;
+            padding-bottom: 5.5vh;
+            height: 5%;
+        }
+        .alltasks{
+            margin-bottom: 1vh;
+            font-size: 4vh;
+        }
+        .cheerupbg{
+            height: 50%;
+            width: 100%;
+            margin-bottom: 3vh;
+            margin-right: 0;
+            padding: 3vh;
+        }
+        .complete{
+            margin-top: 0;
+            margin-bottom: 3vh;
+        }
+        .complete p{
+            font-size: 15vh;
+        }
+        .left {
+            margin-top: 0;
+        }
+        .left p{
+            font-size: 15vh;
+        }
+        /* finance */
+        .tea{
+            font-size: 2.5vh;
+            height: 60%;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 3vh;
+            padding: 3.2vh;
+        }
+        .his{
+            font-size: 2.5vh;
+            width: 60%;
+            height: 40%;
+            padding: 2vh;
+        }
+        .uprow{
+            flex-direction: column;
+            height: 90%;
+        }
+        .downrow{
+            flex-direction: column;
+            align-items: center;
+            height: 10%;
+        }
+        .bal{
+            margin-bottom: 3vh;
+            margin-right: 0;
+            width: 100%;
+            height: 70%;
+        }
+        .finance1{
+            height: 220vh;
+            padding-left: 0;
+            width: 100%;
+            padding-top: 1vh;
+            margin-bottom: 3vh;
+        }
+        .edit{
+            margin-right: 0;
+            margin-bottom: 3vh;
+            width: 100%;
+            height: 35%;
+            font-size: 3vh;
+            padding: 2vh;
+        }
+        .edit select{
+            width: 97%;
+            height: 7vh;
+            padding: 2vh;
+            margin: 1vh;
+            border: 1px solid #d9d9d9;
+            border-radius: 1rem;
+            box-sizing: border-box;
+            font-size: 2.5vh;
+        }
+        .price{
+            width: 97%;
+            height: 7vh;
+            padding: 2vh;
+            border: 1px solid #d9d9d9;
+            border-radius: 1rem;
+            font-size: 2.5vh;
+            margin: 1vh;
+        }
+        .category{
+            text-align: center;
+        }
+        .but{
+            text-align: center;
+        }
+        #fibut{
+            padding: 0;
+            height: 7vh;
+            font-size: 3vh;
+        }
+        .cat{
+            width: 100%;
+            height: 50%;
+        }
+        .inc{
+            margin-top: 0;
+            margin-bottom: 2vh;
+            width: 100%;
+            height: 33%;
+        }
+        .out{
+            margin-top: 0;
+            margin-bottom: 2vh;
+            width: 100%;
+            height: 33%;
+        }
+        .sav{
+            margin-top: 0;
+            width: 100%;
+            height: 33%;
+        }
+        p{
+            font-size: 4vh;
+        }
+        .inc1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .out1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .sav1{
+            margin-bottom: 2vh;
+            height: 5%;
+        }
+        .income{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .outcome{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .savings{
+            margin-top: .5vh;
+            margin-right: 1vh;
+        }
+        .finance2{
+            flex-direction: column;
+            padding-left: 0;
+            height: 400vh;
+            padding-top: 0;
+            margin-bottom: 8vh;
+        }
+        .inch{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .outh{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .savh{
+            height: 100%;
+            width: 100%;
+            margin-right: 3vh;
+        }
+        .inch1{
+            margin-top: 0;
+            margin-bottom: 1vh;
+            height: 6%;
+            font-size: 4vh;
+        }
+        .outh1{
+            margin-top: 6vh;
+            margin-bottom: 1vh;
+            height: 6%;
+            font-size: 4vh;
+        }
+        .savh1{
+            margin-top: 6vh;
+            margin-bottom: 1vh;
+            height: 6%;
+            font-size: 4vh;
+        }
+        .inch2{
+            margin-top: 0;
+            height: 94%;
+            font-size: 2.5vh;
+        }
+        .outh2{
+            margin-top: 0;
+            height: 94%;
+            font-size: 4vh;
+        }
+        .savh2{
+            margin-top: 0;
+            height: 94%;
+            font-size: 4vh;
+        }
+        .todo{
+            flex-direction: column;
+        }
+        .insert{
+            width: 70%;
+            height: 10%;
+        }
+        .add{
+            font-size: 2vh;
+            height: 90%;
+        }
+        .inpull{
+            height: 20%;
+        }
+    }
+    
+.alltasks{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.insert{
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: solid;
+    width: 50%;
+}
+.add{
+    border-radius: 20px;
+    font-size: 5vh;
+    padding: 7px;
+    width: 20%;
+    justify-content: center;
+}
+.box-ul{
+    display: flex;
+    height: 80%;
+    align-content: flex-start;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+.ulto{
+    border-radius: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #FDD;
+    overflow: auto;
+}
+.navlist::after{
+    content: "";
+    background-color: black;
+}
+.todo{
+    justify-content: center;
+    align-items: center;
+}
