@@ -22,9 +22,10 @@
                 <li><a href="#finance1"><img src="../static/icon_finance1.png" class="icon" id="icon3" 
                     onmouseover="changeImage(this, '../static/icon_finance.png')" 
                     onmouseout="changeImage(this, '../static/icon_finance1.png')"></a></li>
-                <li><img src="../static/icon_exit1.png" class="icon" id="icon4" 
+                    <!-- ? logout added -->
+                <li><a href="/logout"><img src="../static/icon_exit1.png" class="icon" id="icon4" 
                     onmouseover="changeImage(this, '../static/icon_exit.png')" 
-                    onmouseout="changeImage(this, '../static/icon_exit1.png')"></li>
+                    onmouseout="changeImage(this, '../static/icon_exit1.png')"></a></li>
             </ul>
         </div>
 <!-- home -->
@@ -40,12 +41,17 @@
                         <a href="#note" class="box-2-1" id="box">Today Tasks</a>
                         <div class="row1 d-flex flex-column w-100">
                             <div class="column3 d-flex flex-row w-100">
-                                <div class="box-3-1 w-50 h-100 " id="box"></div>
+                                <div class="box-3-1 w-50 h-100 " id="box">
+                                </div>
                                 <div class="box-4-1 w-50 h-100">
                                     <div class="ranm"></div>
                                 </div>
                             </div>
-                            <a href="#finance1" class="box-5-1 w-100" id="box">Balance</a>
+                            <!-- ! -->
+
+                            <a href="#finance1" class="box-5-1 w-100" id="box">{{ balance }}</a>
+                            <!-- ! -->
+                            
                         </div>
                         <div class="column4 d-flex flex-column h-100">
                         </div>
@@ -69,20 +75,21 @@
                             <div class="quote">You are getting better everyday!</div>
                             <div class="alltasks">All Tasks
                                 <form action="{{ url_for('views.add') }}" method="POST" class="todo">
-                                    <input type="text" name="todoitem" class="insert" placeholder="what to do?"><input type="submit" value="add" class="add">
-                                                            <!-- ! -->
+                                    <input type="text" name="todoitem" class="insert" placeholder="what to do?">
+                                    <input type="submit" value="add" class="add">
                                 </form>
                                 <div class="box-ul">
                                     <br>
                                     <ul class="ulto">
                                         {% for todo in incomplete %}
-                                        <li style="font-size: 20pt; list-style: none;" ><a href="{{ url_for('views.complete', id=todo.id) }}"><button></button></a>{{ todo.text }}</li>
+                                        <li style="font-size: 20pt; list-style: none;" >
+                                            <a href="{{ url_for('views.complete', id=todo.id) }}"><button></button></a>
+                                            {{ todo.text }}
+                                        </li>
                                         {% endfor %}
                                     </ul>
                                 </div>
                             </div>
-                            
-
                         </div>
                 </div>
             </section>
@@ -94,20 +101,26 @@
                             <img src="../static/finance_income.png" alt="income" class="income">
                             <p>Income</p>
                         </div>
-                        <div class="inc" id="rad"></div>
+                        <div class="inc" id="rad">
+                            <p>{{ sumincome }}</p> <!-- ! -->
+                        </div>
                         <div class="out1 d-flex flex-row">
                             <img src="../static/finance_outcome.png" alt="outcome" class="outcome">
                             <p>Outcome</p>
                         </div>
-                        <div class="out" id="rad"></div>
+                        <div class="out" id="rad">
+                            <p>{{ sumoutcome }}</p> <!-- ! -->
+                        </div>
                         <div class="sav1 d-flex flex-row">
                             <img src="../static/finance_savings.png" alt="savings" class="savings">
                             <p>Savings</p>
                         </div>
-                        <div class="sav" id="rad"></div>
+                        <div class="sav" id="rad">
+                            <p>{{ sumsavings }}</p> <!-- ! -->
+                        </div>
                     </div>
                     <div class="edit d-flex flex-column" id="rad">
-                        <form method="POST">
+                        <form method="POST"> <!-- ! -->
                         <label for="income">Income</label>
                         <input type="text" name="income" class="price" id="incomeprice" oninput="sanitizeInput(this)">
                         <label for="outcome">Outcome</label>
@@ -117,21 +130,64 @@
                         <div class="category d-flex flex-column">
                             <label for="savings" id="categ">Categories</label>
                             <select id="catopt" name="categories">
-                                <option name="gas">Goods & Service</option>
                                 <option name="food">Food</option>
-                                <option name="fare">Fare</option>
                                 <option name="edu">Education</option>
+                                <option name="gas">Goods & Services</option>
+                                <option name="fare">Fare</option>
                                 <option name="other">Other</option>
                             </select>
                         </div>
                         <div class="but">
-                            <!-- ! -->
                             <button type="submit" id="fibut">Done</button>
                         </div>
+                        <div>
+                            <p>{{ message }}</p>
+                        </div>
                         </form>
+                        
+                    </div>
+                    <div class="cat" id="rad">category box
+
+                        <!-- ! -->
+                        <div class="categoryhistory" style="background-color: red;">
+                            <p>
+                                food<br>
+                                {{ sum_food }}
+                            </p>
+                        </div>
+                        <br>
+                        <div class="categoryhistory" style="background-color: red;">
+                            <p>
+                                education<br>
+                                {{ sum_education }}
+                            </p>
+                        </div>
+                        <br>
+                        <div class="categoryhistory" style="background-color: red;">
+                            <p>
+                                good & services<br>
+                                {{ sum_goodsservices }}
+                            </p>
+                        </div>
+                        <br>
+                        <div class="categoryhistory" style="background-color: red;">
+                            <p>
+                                travelfare<br>
+                                {{ sum_travelfare }}
+                            </p>
+                        </div>
+                        <br>
+                        <div class="categoryhistory" style="background-color: red;">
+                            <p>
+                                other<br>
+                                {{ sum_other }}
+                            </p>
+                        </div>
+                        
+                        <!-- ! -->
+
 
                     </div>
-                    <div class="cat" id="rad"></div>
                 </div>
                 <div class="downrow d-flex w-100">
                     <div class="tea" id="rad">Save money and money will save you.</div>
@@ -148,23 +204,51 @@
                         <img src="../static/finance_income.png" alt="income" class="income">
                         <p>Income</p>
                     </div>
-                    <div class="inch2" id="rad"></div>
+                    <div class="inch2" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: aqua;">
+                                <p>{{ i.income }} baht</p>
+                            <br>
+                            {{ i.datetime }}
+                            </div>
+                            <br>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="outh d-flex flex-column">
                     <div class="outh1 d-flex flex-row">
                         <img src="../static/finance_outcome.png" alt="outcome" class="outcome">
                         <p>Outcome</p>
                     </div>
-                    <div class="outh2" id="rad"></div>
+                    <div class="outh2" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: aqua;">
+                                <p>{{ i.outcome }} baht</p>
+                            <br>
+                            {{ i.datetime }}
+                            </div>
+                            <br>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="savh d-flex flex-column">
                     <div class="savh1 d-flex flex-row">
                         <img src="../static/finance_savings.png" alt="savings" class="savings">
                         <p>Savings</p>
                     </div>
-                    <div class="savh2" id="rad"></div>
+                    <div class="savh2" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: aqua;">
+                                <p>{{ i.savings }} baht</p>
+                            <br>
+                            {{ i.datetime }}
+                            </div>
+                            <br>
+                        {% endfor %}
+                    </div>
                 </div>
-            </section> 
+            </section>
+            <!-- & END -->
     <script>
         function changeImage(element, newSrc) {
             element.src = newSrc;
