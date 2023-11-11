@@ -9,7 +9,7 @@
     <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="d-flex" style="background: none; padding: 0; overflow: hidden;">
+<body class="d-flex" style="padding: 0; overflow: hidden;">
     <div class="mamafloat">
         <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
         <section id="home" class="task d-flex flex-column">
@@ -22,7 +22,10 @@
                     <a href="#note" class="box-2-1" id="box">Today Tasks</a>
                     <div class="row1 d-flex flex-column w-100">
                         <div class="column3 d-flex flex-row w-100">
-                            <div class="box-3-1 w-50 h-100 " id="box"></div>
+                            <div class="box-3-1 w-50 h-100 d-flex flex-column" id="box">
+                                <div id="time"></div>
+                                <div id="date"></div>
+                            </div>
                             <div class="box-4-1 w-50 h-100">
                                 <div class="ranm"></div>
                             </div>
@@ -116,6 +119,24 @@
             updateRandomImage();
         });
         setInterval(updateRandomImage, 300000);
+
+        function updateDate() {
+            var now = new Date();
+            var dateElement = document.getElementById("date");
+            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            dateElement.innerText = now.toLocaleString('en-TH', options);
+        }
+        setInterval(updateDate, 1000);
+        updateDate();
+
+        function updateTime() {
+            var now = new Date();
+            var timeElement = document.getElementById("time");
+            var options = { hour: 'numeric', minute: 'numeric', hour12: false };
+            timeElement.innerText = now.toLocaleString('en-TH', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
     </script>
 </body>
 </html>

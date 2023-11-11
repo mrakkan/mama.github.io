@@ -72,8 +72,26 @@
         color: #582b13;
     }
     .box-3-1{
-        background-color: #fff;
+        background: url(../static/5957567.png);
+        background-position: bottom;
+        background-size: cover;
         border-radius: 3rem;
+        text-align: center;
+        padding: 2vh;
+    }
+    #time{
+        width: 100%;
+        height: 65%;
+        font-size: 11vh;
+        color: #582b13;
+        text-shadow: 0 0 4px #582b13;
+    }
+    #date{
+        width: 100%;
+        height: 35%;
+        font-size: 3.5vh;
+        color: #582b13;
+        text-shadow: 0 0 2px #582b13;
     }
     .box-4-1{
         background-color: #fff;
@@ -557,6 +575,16 @@
             height: 43%;
             margin-bottom: 3vh;
             padding-left: 2vh;
+        }
+        #time{
+            width: 100%;
+            height: 65%;
+            font-size: 6vh;
+        }
+        #date{
+            width: 100%;
+            height: 35%;
+            font-size: 2vh;
         }
         /* note */
         .mamanote{
