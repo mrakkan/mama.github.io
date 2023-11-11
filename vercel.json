@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/todolist print/app.py" }
+    ]
+  }
