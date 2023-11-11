@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 db = SQLAlchemy()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todolist.db'
-
+#postgres://mrakkan:zj5ghIylbzpiDDk2ykJcuJXH78JJKf6k@dpg-cl7qgkf6e7vc739vnp7g-a.singapore-postgres.render.com/mamadb
 
 db.init_app(app)
 
