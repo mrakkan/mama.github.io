@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/stylehome.css">
+    <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
+    <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
+    <title>todos</title>
+</head>
+<body style="background: none; padding: 0;" class="funcce d-flex">
+    <section class="note d-flex flex-column" id="note">
+        <div class="notecolumn d-flex w-100 h-100">
+            <div class="cheerupbg d-flex">
+                <div class="complete">{{ complete|length }}</div>
+                <img src="../static/momnote.png" alt="mamanote" class="mamanote">
+                <div class="left">{{ incomplete|length }}</div>
+            </div>
+                <div class="notecolumn2 d-flex flex-column w-100">
+                    <div class="quote">You are getting better everyday!</div>
+                    <div class="alltasks d-flex">All Tasks
+                        <div class="inpull">
+                            <form action="{{ url_for('views.add') }}" method="POST" class="todo d-flex">
+                            <input type="text" name="todoitem" class="insert" placeholder="what to do?">
+                                <input type="submit" value="add" class="add">
+                            </form>
+                        </div>
+                        <div class="box-ul">
+                            <br>
+                            <ul class="ulto">
+                                {% for todo in incomplete %}
+                                <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >
+                                    <a href="{{ url_for('views.complete', id=todo.id) }}" class="tobut"><button class="del"></button></a>{{ todo.text }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+<script>
+    document.getElementById('todoform').onsubmit=function(){
+        parent.location.reload();
+        return false;
+    };
+</script>
+</body>
+</html>

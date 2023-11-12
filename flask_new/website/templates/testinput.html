@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        form{
+            position: absolute;
+            left: 45%;
+            top: 45%;
+            width: 30vh;
+        }
+    </style>
+    <form method="POST">
+
+    <!-- <select name="user_name" id=""> -->
+
+
+
+    </select>
+
+    <input type="number" min="0" max="10000000000" step="any" placeholder="income" name="income">
+        <br>
+
+        <input type="number" min="0" max="10000000000" step="any" placeholder="outcome" name="outcome">
+        <br>
+
+    <input type="number" min="0" max="10000000000" step="any" placeholder="savings" name="savings">
+        <br>
+
+    <!-- <input type="text" min="0" max="10000000000" step="any" placeholder="category" name="category"> -->
+    <select name="category" id="car">
+        <option name=""></option>
+        <option name="food">food</option>
+        <option name="education">education</option>
+        <option name="goods&services">goodsservices</option>
+        <option name="travelfare">travelfare</option>
+        <option name="other">other</option>
+
+        <option name="">yo</option>
+        <!-- option name="" ต้องเป็น name="" not value="" -->
+    </select>
+
+    <input type="submit"  alt="testinginput" name="testsubmit">
+
+
+    <!-- <p>income is {{income}}</p>
+    <p>outcome is {{outcome}}</p>
+    <p>savings is {{savings}}</p>
+    <p>category is {{category}}</p>
+    <p>balance is {{balance}}</p> -->
+
+    <p>{{ message }}</p>
+
+
+    </form>
+</body>
+</html>
