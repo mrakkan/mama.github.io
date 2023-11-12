@@ -764,6 +764,9 @@
             height: 94%;
             font-size: 4vh;
         }
+        .ifrom{
+            height: 150vh;
+        }
     }
 .alltasks{
     display: flex;
