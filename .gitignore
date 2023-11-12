@@ -1,4 +1,2 @@
+__pycache__
 .vscode
-flask_tim/website/__pycache__
-flask_tim/__pycache__
-flask_test_financial/__pycache__
