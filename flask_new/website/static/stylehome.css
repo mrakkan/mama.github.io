@@ -231,41 +231,48 @@
         position: absolute;
         width: 14%;
     }
+    .mestodo{
+        font-size: 3vh;
+        height: 20%;
+    }
     .complete{
         background: url(../static/home_todo_complete.png);
         background-position: center;
         background-size: cover;
+        flex-direction: column;
         border-radius: 3rem;
         width: 100%;
-        height: 50%;
+        height: 40%;
         z-index: 1;
-        margin-top: 20vh;
+        margin-top: 10vh;
         text-align: center;
         padding: 2vh;
         color: #FFF6EC;
         text-shadow: 0 0 10px rgb(255, 221, 120), 0 0 20px #FFF6EC, 0 0 30px rgb(255, 38, 0);
-        font-size: 18vh;
+        font-size: 13vh;
+
     }
     .complete p{
         color: #FFF6EC;
         text-shadow: 0 0 10px rgb(255, 221, 120), 0 0 20px #FFF6EC, 0 0 30px rgb(255, 38, 0);
-        font-size: 18vh;
+        font-size: 13vh;
 
     }
     .left {
         background: url(../static/5686651.jpg);
         background-position: center;
         background-size: cover;
+        flex-direction: column;
         border-radius: 3rem;
         width: 100%;
-        height: 50%;
+        height: 40%;
         margin-top: 4vh;
         z-index: 1;
         text-align: center;
         padding: 2vh;
         color: #582b13;
         text-shadow: 0 0 10px #582b13, 0 0 20px rgb(217, 184, 146), 0 0 30px rgb(178, 87, 17);
-        font-size: 18vh;
+        font-size: 15vh;
     }
     .left p{
         color: #582b13;
@@ -277,10 +284,24 @@
         flex-direction: column;
         background-color: #fff;
         border-radius: 3rem;
-        padding: 0;
+        padding: 2vh;
         font-size: 5vh;
         text-align: center;
         height: 100%;
+        position: relative;
+    }
+    .reload{
+        height: 7vh;
+        width: 7vh;
+        position: absolute;
+        left: 90%;
+    }
+    .fiload{
+        height: 10vh;
+        width: 10vh;
+        position: absolute;
+        top: -0.25vh;
+        left: 85%;
     }
     /* finance1 */
     .finance1{
@@ -391,6 +412,7 @@
         margin-right: 3vh;
         font-size: 4vh;
         padding: 4vh;
+        position: relative;
     }
     .edit select{
         width: 97%;
@@ -561,6 +583,9 @@
         width: 100%;
         gap: 2vh;
     }
+    .inch2::-webkit-scrollbar, .outh2::-webkit-scrollbar, .savh2::-webkit-scrollbar{
+        display: none;
+    }
     .outh1{
         border-radius: 3rem;
         height: 7%;
@@ -627,6 +652,15 @@
         overflow: hidden;
     }
     @media (max-width: 900px){
+        .historyfinance2{
+            padding: 2vh;
+        }
+        .fiload{
+            width: 7vh;
+        }
+        .reload{
+            left: 80%;
+        }
         .main{
             height: 100vh;
             overflow: visible;
@@ -964,7 +998,7 @@
         }
         .inch2{
             margin-top: 0;
-            height: 94%;
+            height: 88%;
             font-size: 2.5vh;
         }
         .outh2{

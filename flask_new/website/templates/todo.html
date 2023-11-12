@@ -12,9 +12,9 @@
     <section class="note d-flex flex-column" id="note">
         <div class="notecolumn d-flex w-100 h-100">
             <div class="cheerupbg d-flex">
-                <div class="complete">{{ complete|length }}</div>
+                <div class="complete d-flex"><span class="mestodo">You have completed</span><div>{{ complete|length }}</div><span class="mestodo">tasks today!</span></div>
                 <img src="../static/momnote.png" alt="mamanote" class="mamanote">
-                <div class="left">{{ incomplete|length }}</div>
+                <div class="left d-flex"><span class="mestodo">You have</span>{{ incomplete|length }}<span class="mestodo">tasks left</span></div>
             </div>
                 <div class="notecolumn2 d-flex flex-column w-100">
                     <div class="quote">You are getting better everyday!</div>
@@ -34,6 +34,7 @@
                                 {% endfor %}
                             </ul>
                         </div>
+                        <a href="javascript:location.reload(true)" class="reload" target="_parent"><img src="../static/reload-svgrepo-com.png" class="picre w-100 "></a>
                     </div>
                 </div>
         </div>
