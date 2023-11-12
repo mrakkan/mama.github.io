@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/stylehome.css">
+    <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="d-flex" style="background: none; padding: 0; overflow: hidden;">
+    <div class="mamafloat">
+        <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
+        <section id="home" class="task d-flex flex-column">
+            <div class="box1 d-flex flex-column" id="rad">
+                <div class="greet">Yo username kiddo!</div>
+                <div class="ranq" id="quoteBox"></div>
+            </div>
+            <div class="row2 d-flex flex-row w-100 h-100">
+                <div class="column2 d-flex flex-row w-100 h-100">
+                    <a href="#todo" onclick="sendMessageToParent('todo')" class="box-2-1" id="box">Today Tasks
+                        <ul class="tdtask">
+                            {% for todo in incomplete %}
+                            <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >{{ todo.text }}</li>
+                            {% endfor %}
+                        </ul>
+                    </a>
+                    <div class="row1 d-flex flex-column w-100">
+                        <div class="column3 d-flex flex-row w-100">
+                            <div class="box-3-1 w-50 h-100 " id="box">
+                                <div id="time"></div>
+                                <div id="date"></div>
+                            </div>
+                            <div class="box-4-1 w-50 h-100">
+                                <div class="ranm"></div>
+                            </div>
+                        </div>
+                        <a href="#finance1" onclick="sendMessageToParent('finance2')" class="box-5-1 w-100" id="box"><div class="balance">balance</div><div class="mon">{{ balance|int }}</div></a>
+                    </div>
+                    <div class="column4 d-flex flex-column h-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function changeImage(element, newSrc) {
+            element.src = newSrc;
+        }
+        const quotes = [
+        "You are doing better than you think.",
+        "Give yourself permission to rest.",
+        "It is okay to feel lost sometimes.",
+        "It is okay if today did not go as planned.",
+        "Self-care is how you take your power back.",
+        "It is okay to put yourself first.",
+        "Those mistakes you have made along the way are." ,"lessons, not failure.",
+        "Happiness looks good on you.",
+        "Don’t you worry.",
+        "Believe in what you prayed for.",
+        "You are too smart to worry.",
+        "Everything will be fine.",
+        "Every day is a second chance.",
+        "Give some more time to yourself.",
+        "Your patient is your power.",
+        "You did very well today.",
+        "Things always get better.",
+        "You are your priority."
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quoteBox');
+            quoteElement.innerText = quotes[randomIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getRandomQuote();
+        });
+        const imageSources = [
+            "../static/food1.png",
+            "../static/food2.png",
+            "../static/food3.png",
+            "../static/food4.png",
+            "../static/food5.png",
+            "../static/food6.png",
+            "../static/food7.png",
+            "../static/food8.png",
+            "../static/food9.png",
+            "../static/food10.png",
+            "../static/food11.png",
+            "../static/food12.png",
+            "../static/food13.png",
+            "../static/food14.png",
+            "../static/food15.png",
+            "../static/food16.png",
+            "../static/food17.png",
+            "../static/food18.png",
+            "../static/food19.png",
+            "../static/food20.png",
+            "../static/food21.png",
+            "../static/food22.png",
+            "../static/food23.png",
+            "../static/food24.png",
+            "../static/food25.png",
+            "../static/food26.png",
+            "../static/food27.png",
+            "../static/food28.png",
+            "../static/food29.png",
+            "../static/food30.png"
+        ];
+
+        function getRandomImageSource() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            return imageSources[randomIndex];
+        }
+
+        function updateRandomImage() {
+            const ranmElement = document.querySelector('.ranm');
+            ranmElement.style.backgroundImage = `url('${getRandomImageSource()}')`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateRandomImage();
+        });
+        setInterval(updateRandomImage, 300000);
+
+        function updateDate() {
+            var now = new Date();
+            var dateElement = document.getElementById("date");
+            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            dateElement.innerText = now.toLocaleString('en-TH', options);
+        }
+        setInterval(updateDate, 1000);
+        updateDate();
+
+        function updateTime() {
+            var now = new Date();
+            var timeElement = document.getElementById("time");
+            var options = { hour: 'numeric', minute: 'numeric', hour12: false };
+            timeElement.innerText = now.toLocaleString('en-TH', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+        function sendMessageToParent(sectionId) {
+            // ส่งข้อความไปยัง parent window โดยใช้ postMessage
+            window.parent.postMessage(sectionId, '*');
+        }
+    </script>
+</body>
+</html>
