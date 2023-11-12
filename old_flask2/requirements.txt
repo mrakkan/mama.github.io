@@ -1,0 +1,5 @@
+flask
+Flask-SQLAlchemy
+flask-login
+flask_mail==0.9.0
+Werkzeug

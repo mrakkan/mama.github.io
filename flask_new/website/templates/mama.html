@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startpage</title>
+    <link href="../static/mamafield.css" rel="stylesheet">
+</head>
+<body>
+    <section class="uppername">
+        <div class="header">
+            <div id="text">
+                <img src="../static/logo.png" class="emae">
+                <h2>Description</h2>
+            </div>
+    </section>
+    <div class="button">
+        <a href="/login"><input type="submit" name="gologin" value="Go" class="btn"></a>
+    </div>
+    <section class="floatingob">
+        <div class="explode">
+            <img src="../static/meal2.png" class="meal2">
+            <div class="score1">+1</div>
+        </div>
+        <div class="explode2">
+            <img src="../static/learn2.png" class="learn2">
+            <div class="score2">+1</div>
+        </div>
+        <div class="explode3">
+            <img src="../static/money.png" class="money">
+            <div class="score3">+1</div>
+        </div>
+        <div class="explode4">
+            <img src="../static/calendar.png" class="calendar">
+            <div class="score4">+1</div>
+        </div>
+        <div class="explode5">
+            <img src="../static/meal4.png" class="cornny">
+            <div class="score5">+1</div>
+        </div>
+        <div class="explode6">
+            <img src="../static/meal3.png" class="meal3">
+            <div class="score6">+1</div>
+        </div>
+    </section>
+    <script>
+    let explodeObject = document.querySelector('.meal2');
+    let learnObject = document.querySelector('.learn2');
+    let moneyObject = document.querySelector('.money');
+    let calenObject = document.querySelector('.calendar');
+    let cornObject = document.querySelector('.cornny');
+    let meal3Object = document.querySelector('.meal3');
+    let score_1 = document.querySelector('.score1');
+    let score_2 = document.querySelector('.score2');
+    let score_3 = document.querySelector('.score3');
+    let score_4 = document.querySelector('.score4');
+    let score_5 = document.querySelector('.score5');
+    let score_6 = document.querySelector('.score6');
+    explodeObject.addEventListener('click', () => {
+    explodeObject.classList.add('clicked');
+    score_1.classList.add('clicked');
+    setTimeout(() => {
+        explodeObject.classList.remove('clicked');
+        score_1.classList.remove('clicked');
+    }, 4000);
+});
+    learnObject.addEventListener('click', () => {
+    learnObject.classList.add('clicked');
+    score_2.classList.add('clicked');
+    setTimeout(() => {
+        learnObject.classList.remove('clicked');
+        score_2.classList.remove('clicked');
+    }, 4000);
+});
+    moneyObject.addEventListener('click', () => {
+    moneyObject.classList.add('clicked');
+    score_3.classList.add('clicked');
+    setTimeout(() => {
+        moneyObject.classList.remove('clicked');
+        score_3.classList.remove('clicked');
+    }, 4000);
+});
+    calenObject.addEventListener('click', () => {
+    calenObject.classList.add('clicked');
+    score_4.classList.add('clicked');
+    setTimeout(() => {
+        calenObject.classList.remove('clicked');
+        score_4.classList.remove('clicked');
+    }, 4000);
+});
+    cornObject.addEventListener('click', () => {
+    cornObject.classList.add('clicked');
+    score_5.classList.add('clicked');
+    setTimeout(() => {
+        cornObject.classList.remove('clicked');
+        score_5.classList.remove('clicked');
+    }, 4000);
+});
+    meal3Object.addEventListener('click', () => {
+    meal3Object.classList.add('clicked');
+    score_6.classList.add('clicked');
+    setTimeout(() => {
+        meal3Object.classList.remove('clicked');
+        score_6.classList.remove('clicked');
+    }, 4000);
+});
+    </script>
+</body>
+</html>
