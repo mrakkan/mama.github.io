@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Oduda';
+    src: url(../static/Oduda-Bold-Demo.otf);
+}
+*{
+font-family: 'Oduda';
+color: #3A305A;
+}
+body{
+    margin: auto;
+    padding: auto;
+    background-image: url("bg_start_m.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+.uppername{
+    margin-top: 5vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+
+}
+#text{
+    animation-duration: 1.5s;
+    animation-name: comefromtop;
+}
+
+@keyframes comefromtop {
+    from{
+        margin-top: -50%;
+    }
+    to{
+        margin-top: 0%;
+    }
+}
+@keyframes buttonfade {
+    0%{
+        margin-top: -20%;
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        margin-top: 0%;
+        opacity: 100%;
+    }
+}
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.emae{
+    margin-left: 7%;
+    width: 80%;
+    height: 80%;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 3vh;
+}
+.button{
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    animation-duration: 2s;
+    animation-name: buttonfade;
+}
+.btn{
+    padding: 20px;
+    text-align: center;
+    font-size: 100%;
+    background-color: rgb(247, 175, 187);
+    width: 20vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+
+}
+.btn:hover{
+    background-color: brown;
+    transition-duration: 1s;
+    color: #fff;
+}
+.mom{
+    position: absolute;
+    top: 43%;
+    left: 26%;
+    animation-name: mommy;
+    animation-duration: 3s;
+}
+@keyframes mommy{
+    0%{
+        bottom: 50%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+#maeee{
+    width: 110vh;
+
+}
+
+.meal2{
+    width: 20rem;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    cursor: pointer;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    overflow: visible;
+}
+.meal2.clicked{
+    transform: scale(0);
+}
+.score1{
+    position: absolute;
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+    transform: translate(100%, 100%);
+}
+.score2{
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+}
+.score3{
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+}
+.score4{
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+    right: 0%;
+}
+.score5{
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+    right: 0%;
+}
+.score6{
+    font-size: 5vh;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    opacity: 0%;
+    transition: transform 0.5s;
+    animation-duration: 1s;
+    right: 0%;
+}
+.score1.clicked{
+    animation-name: score;
+}
+.score2.clicked{
+    animation-name: score;
+}
+.score3.clicked{
+    animation-name: score;
+}
+.score4.clicked{
+    animation-name: score;
+}
+.score5.clicked{
+    animation-name: score;
+}
+.score6.clicked{
+    animation-name: score;
+}
+@keyframes score{
+    0%{
+        transform: translateY(-300%);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(-500%);
+        opacity: 100%;
+        }
+ }
+.learn2{
+    width: 25rem;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.learn2.clicked{
+    transform: scale(0);
+}
+.money{
+    width: 17rem;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    transition: transform 0.5s;
+    cursor: pointer;
+    rotate: -20deg;
+}
+.money.clicked{
+    transform: scale(0);
+}
+.calendar{
+    width: 18rem;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.calendar.clicked{
+    transform: scale(0);
+}
+.cornny{
+    width: 14rem;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.cornny.clicked{
+    transform: scale(0);
+}
+.meal3{
+    width: 14rem;
+    filter: drop-shadow(10px 0px 40px rgba(247, 175, 20, 0.993));
+    transition: transform 0.5s;
+    cursor: pointer;
+    rotate: 20deg;
+}
+.meal3.clicked{
+    transform: scale(0);
+}
+.explode{
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    overflow:visible;
+    left: 0;
+}
+.explode2{
+    position: absolute;
+    width: 20vh;
+    overflow:visible;
+    transform: translate(50%, 100%);
+}
+.explode3{
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    overflow:visible;
+    transform: translate(20%, 300%);
+}
+.explode4{
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    overflow:visible;
+    transform: translate(600%, 120%);
+}
+.explode5{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    overflow:visible;
+    transform: translate(500%, 20%);
+}
+.explode6{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    overflow:visible;
+    transform: translate(500%, 220%);
+}
+@media (max-width: 1500px){
+    .floatingob{
+        display: none;
+    }
+    h2{
+        font-size: 3vh;
+        margin-top: 6vh;
+    }
+}

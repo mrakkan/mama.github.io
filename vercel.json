@@ -1,5 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/todolist_print/index" }
-    ]
-  }

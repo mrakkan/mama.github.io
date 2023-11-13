@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mamahome</title>
+        <link rel="stylesheet" href="../static/bootstrap tp/css/bootstrap.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../static/stylehome.css">
+        <link href="https://db.onlinewebfonts.com/c/b9b4e2e298a645a5868a6fa0c08bede3?family=Oduda+Bold" rel="stylesheet">
+    </head>
+    <body class="d-flex">
+<!-- icon -->
+        <div class= "navlist">
+            <ul class="navicon m-0 p-0 justify-content-center">
+                <li><a href="#home"><img src="../static/icon_home1.png" class="icon" id="icon1" 
+                    onmouseover="changeImage(this, '../static/icon_home.png')" 
+                    onmouseout="changeImage(this, '../static/icon_home1.png')"></a></li>
+                <li><a href="#todo"><img src="../static/icon_reminder1.png" class="icon" id="icon2" 
+                    onmouseover="changeImage(this, '../static/icon_reminder.png')" 
+                    onmouseout="changeImage(this, '../static/icon_reminder1.png')"></a></li>
+                <li><a href="#finance1"><img src="../static/icon_finance1.png" class="icon" id="icon3" 
+                    onmouseover="changeImage(this, '../static/icon_finance.png')" 
+                    onmouseout="changeImage(this, '../static/icon_finance1.png')"></a></li>
+                    <!-- ? logout added -->
+                <li><a href="/logout"><img src="../static/icon_exit1.png" class="icon" id="icon4" 
+                    onmouseover="changeImage(this, '../static/icon_exit.png')" 
+                    onmouseout="changeImage(this, '../static/icon_exit1.png')"></a></li>
+            </ul>
+        </div>
+<!-- home -->
+    <iframe src="{{ url_for('views.main') }}" class="main" id="home"></iframe>
+<!-- note -->
+        <iframe src="{{ url_for('views.todoshow') }}" class="ifrom" id="todo"></iframe>
+
+<!-- finance1 -->
+        <iframe src="{{ url_for('views.finnie') }}" class="finnie" id="finance1"></iframe>
+
+<!-- finance2 -->
+            <section class="finance2 d-flex" id="finance2">
+                <div class="inch d-flex flex-column">
+                    <div class="inch1 d-flex flex-row">
+                        <img src="../static/finance_income.png" alt="income" class="income">
+                        <p>Income</p>
+                    </div>
+                    <div class="inch2 overflow-auto p-3" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: #fbac81;">
+                                <p>{{ i.income }} baht</p>
+                            
+                            {{ i.datetime }}
+                            </div>
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="outh d-flex flex-column">
+                    <div class="outh1 d-flex flex-row">
+                        <img src="../static/finance_outcome.png" alt="outcome" class="outcome">
+                        <p>Outcome</p>
+                    </div>
+                    <div class="outh2 overflow-auto p-3" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: #fbac81;">
+                                <p>{{ i.outcome }} baht</p>
+                            
+                            {{ i.datetime }}
+                            </div>
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="savh d-flex flex-column">
+                    <div class="savh1 d-flex flex-row">
+                        <img src="../static/finance_savings.png" alt="savings" class="savings">
+                        <p>Savings</p>
+                    </div>
+                    <div class="savh2 overflow-auto p-3" id="rad">
+                        {% for i in history10 %}
+                            <div class="historyfinance2" style="background-color: #fbac81;">
+                                <p>{{ i.savings }} baht</p>
+                            
+                            {{ i.datetime }}
+                            </div>
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <!-- & END -->
+    <script>
+        function changeImage(element, newSrc) {
+            element.src = newSrc;
+        }
+        const quotes = [
+        "You are doing better than you think.",
+        "Give yourself permission to rest.",
+        "It is okay to feel lost sometimes.",
+        "It is okay if today did not go as planned.",
+        "Self-care is how you take your power back.",
+        "It is okay to put yourself first.",
+        "Those mistakes you have made along the way are." ,"lessons, not failure.",
+        "Happiness looks good on you.",
+        "Don’t you worry.",
+        "Believe in what you prayed for.",
+        "You are too smart to worry.",
+        "Everything will be fine.",
+        "Every day is a second chance.",
+        "Give some more time to yourself.",
+        "Your patient is your power.",
+        "You did very well today.",
+        "Things always get better.",
+        "You are your priority."
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById('quoteBox');
+            quoteElement.innerText = quotes[randomIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getRandomQuote();
+        });
+        const imageSources = [
+            "../static/food1.png",
+            "../static/food2.png",
+            "../static/food3.png",
+            "../static/food4.png",
+            "../static/food5.png",
+            "../static/food6.png",
+            "../static/food7.png",
+            "../static/food8.png",
+            "../static/food9.png",
+            "../static/food10.png",
+            "../static/food11.png",
+            "../static/food12.png",
+            "../static/food13.png",
+            "../static/food14.png",
+            "../static/food15.png",
+            "../static/food16.png",
+            "../static/food17.png",
+            "../static/food18.png",
+            "../static/food19.png",
+            "../static/food20.png",
+            "../static/food21.png",
+            "../static/food22.png",
+            "../static/food23.png",
+            "../static/food24.png",
+            "../static/food25.png",
+            "../static/food26.png",
+            "../static/food27.png",
+            "../static/food28.png",
+            "../static/food29.png",
+            "../static/food30.png"
+        ];
+
+        function getRandomImageSource() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            return imageSources[randomIndex];
+        }
+
+        function updateRandomImage() {
+            const ranmElement = document.querySelector('.ranm');
+            ranmElement.style.backgroundImage = `url('${getRandomImageSource()}')`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateRandomImage();
+        });
+        setInterval(updateRandomImage, 300000);
+
+        function sanitizeInput(input) {
+            let sanitizedValue = input.value.replace(/[^0-9.]/g, '');
+
+            if (sanitizedValue.trim() !== '' && !isNumeric(sanitizedValue)) {
+                alert('Please enter a valid numeric value.');
+                input.value = '';
+            } else {
+                input.value = sanitizedValue;
+            }
+        }
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+        const outcomePriceInput = document.getElementById('outcomeprice');
+        const categLabel = document.getElementById('categ');
+        const catoptSelect = document.getElementById('catopt');
+
+        outcomePriceInput.addEventListener('input', function () {
+            if (outcomePriceInput.value.trim() !== '') {
+                categLabel.style.display = 'block';
+                catoptSelect.style.display = 'block';
+            } else {
+                categLabel.style.display = 'none';
+                catoptSelect.style.display = 'none';
+            }
+        });
+    });
+    window.addEventListener('message', receiveMessage, false);
+
+function receiveMessage(event) {
+    // ตรวจสอบว่าข้อความมาจาก iframe
+    if (event.origin !== '../static/main.html') {
+        return;
+    }
+
+    // ดึงค่า ID ของ section ที่ได้รับจาก iframe
+    const sectionId = event.data;
+
+    // อัพเดท URL ของหน้าหลักด้วย hash ที่ได้รับจาก iframe
+    window.location.hash = sectionId;
+}
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        AOS.init();
+    </script>
+    </body>
+</html>
