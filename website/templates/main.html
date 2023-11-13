@@ -19,13 +19,13 @@
             </div>
             <div class="row2 d-flex flex-row w-100 h-100">
                 <div class="column2 d-flex flex-row w-100 h-100">
-                    <a href="#todo" onclick="sendMessageToParent('todo')" class="box-2-1" id="box">Today Tasks
+                    <div class="box-2-1" id="box">Today Tasks
                         <ul class="tdtask">
                             {% for todo in incomplete %}
                             <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >- {{ todo.text }}</li>
                             {% endfor %}
                         </ul>
-                    </a>
+                    </div>
                     <div class="row1 d-flex flex-column w-100">
                         <div class="column3 d-flex flex-row w-100">
                             <div class="box-3-1 w-50 h-100 " id="box">
@@ -36,8 +36,8 @@
                                 <div class="ranm"></div>
                             </div>
                         </div>
-                        <a href="#finance1" onclick="sendMessageToParent('finance2')" class="box-5-1 w-100" id="box">
-                            <div class="balance">balance</div><div class="mon">{{ balance|int }}</div></a>
+                        <div class="box-5-1 w-100" id="box">
+                            <div class="balance">balance</div><div class="mon">{{ balance|int }}</div></div>
                     </div>
                     <div class="column4 d-flex flex-column h-100">
                     </div>
