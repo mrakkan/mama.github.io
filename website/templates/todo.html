@@ -30,7 +30,7 @@
                             <ul class="ulto">
                                 {% for todo in incomplete %}
                                 <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >
-                                    <a href="{{ url_for('views.complete', id=todo.id) }}" class="tobut"><button class="del"><img class="xcross" src="../static/cross-mark-svgrepo-com (1).png"></button></a>{{ todo.text }}</li>
+                                    <a href="{{ url_for('views.complete', id=todo.id) }}" class="tobut"><button class="del"><img class="xcross" src="../static/cross-mark.png"></button></a>{{ todo.text }}</li>
                                 {% endfor %}
                             </ul>
                         </div>

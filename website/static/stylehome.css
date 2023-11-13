@@ -177,13 +177,23 @@
         display: none;
     }
     /* note */
+    .xcross{
+        width: 4vh;
+    }
     .del{
+        display: flex;
+        justify-content: center;
+        display: flex;
         width: 7vh;
         height:5vh;
         border: none;
         align-items: center;
         border-radius: 3vh;
         padding: 0;
+    }
+    .del:hover{
+        background-color: #582b13;
+        transition: 0.5s;
     }
     .tobut{
         display: flex;
