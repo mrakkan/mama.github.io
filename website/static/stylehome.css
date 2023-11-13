@@ -171,6 +171,10 @@
         padding: 0;
         margin: 0;
         border-radius: 3vh;
+        overflow: auto;
+    }
+    .tdtask::-webkit-scrollbar{
+        display: none;
     }
     /* note */
     .del{
@@ -644,6 +648,11 @@
     }
     .finnie::-webkit-scrollbar{
         display: none;
+    }
+    @media (max-width: 600px){
+        .mestodo{
+            font-size: 2vh;
+        }
     }
     @media (max-width: 900px){
         .historyfinance2{
