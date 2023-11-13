@@ -11,28 +11,17 @@ class User(db.Model, UserMixin):
     id = mapped_column(Integer, primary_key=True, nullable=False)
     email = mapped_column(String(150), unique=True, nullable=False)
     password = mapped_column(String(150))
-    # notes = relationship('Note')
     finances = relationship('Finance')
     todos = relationship('Todo')
 
 
 
-
-# class Note(db.Model):
-#     id = mapped_column(Integer, primary_key=True)
-#     data = mapped_column(String(10000))
-#     date = mapped_column(DateTime(timezone=True), default=func.now())
-#     user_id = mapped_column(Integer, ForeignKey('user.id'))
-
-
-# * #
 class Todo(db.Model):
     id = mapped_column(Integer, primary_key=True)
     user_id = mapped_column(Integer, ForeignKey('user.id'))
 
     text = mapped_column(String(200))
     complete = mapped_column(Boolean)
-# * #
 
 
 

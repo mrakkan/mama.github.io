@@ -14,7 +14,7 @@
         <img src="../static/mama_home.png" alt="mama_home" class="mamahome">
         <section id="home" class="task d-flex flex-column">
             <div class="box1 d-flex flex-column" id="rad">
-                <div class="greet">Yo username kiddo!</div>
+                <div class="greet">Yo <span>{{ username }}</span> kiddo!</div>
                 <div class="ranq" id="quoteBox"></div>
             </div>
             <div class="row2 d-flex flex-row w-100 h-100">
@@ -22,7 +22,7 @@
                     <a href="#todo" onclick="sendMessageToParent('todo')" class="box-2-1" id="box">Today Tasks
                         <ul class="tdtask">
                             {% for todo in incomplete %}
-                            <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >{{ todo.text }}</li>
+                            <li style="font-size: 5vh; list-style: none; display: flex; justify-content: center;" >- {{ todo.text }}</li>
                             {% endfor %}
                         </ul>
                     </a>
@@ -36,7 +36,8 @@
                                 <div class="ranm"></div>
                             </div>
                         </div>
-                        <a href="#finance1" onclick="sendMessageToParent('finance2')" class="box-5-1 w-100" id="box"><div class="balance">balance</div><div class="mon">{{ balance|int }}</div></a>
+                        <a href="#finance1" onclick="sendMessageToParent('finance2')" class="box-5-1 w-100" id="box">
+                            <div class="balance">balance</div><div class="mon">{{ balance|int }}</div></a>
                     </div>
                     <div class="column4 d-flex flex-column h-100">
                     </div>
@@ -147,6 +148,7 @@
             // ส่งข้อความไปยัง parent window โดยใช้ postMessage
             window.parent.postMessage(sectionId, '*');
         }
+
     </script>
 </body>
 </html>
