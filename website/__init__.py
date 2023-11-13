@@ -23,7 +23,6 @@ def create_app():
 
     from .model import User, Todo, Finance
 
-    # create_database(app) ## อันนี้ไม่ได้ ทำไมไม่รู้
 
 ### ต้องใช้แบบนี้เท่านั้น น่าจะเพราะ sqlalchemy คนละ version
     with app.app_context():
@@ -44,7 +43,3 @@ def create_app():
 
 ### def create_database(app): & db.create_all(app=app) ใช้ไม่ได้ ทำไมไม่รู้(อีกละ)
 ### มันให้เอา parameter : app ออก
-# def create_database(): # <= def create_database(app):
-#     if not path.exists('website/' + DB_NAME):
-#         db.create_all() # <= db.create_all(app=app)
-#         print('created database')

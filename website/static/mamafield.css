@@ -294,4 +294,8 @@ h2{
     .floatingob{
         display: none;
     }
+    h2{
+        font-size: 3vh;
+        margin-top: 6vh;
+    }
 }

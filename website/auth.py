@@ -5,7 +5,6 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user
 
-# from flask_login import *
 
 
 auth = Blueprint('auth', __name__)
@@ -23,7 +22,6 @@ def login():
                 flash('Logged in successfully.', category='success')
 
                 login_user(user_email_check, remember=True) # remember=False ก็คือไม่ต้องจำก็ได้
-                # login_user(user_email_check, remember=False)
 
                 return redirect(url_for('views.home')) # flask 3 redirect() เหมือนจะไม่มี (,response)
             else:
@@ -72,11 +70,10 @@ def sign_up():
             db.session.commit()
 
             login_user(new_user, remember=True) # remember=False ไม่ต้องจำก็ได้
-            # login_user(user_email_check, remember=False)
+
 
             flash('Account created', category='success')
             return redirect(url_for('auth.login'))
-            # url_for('ชื่อไฟล์.function')
 
 
     return render_template('signup.html')
