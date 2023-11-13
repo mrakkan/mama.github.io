@@ -101,6 +101,6 @@ def bmi(respond_dict): #ฟังก์ชั่นสำหรับคำน�
 
 #Flask
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
+    port = int(os.getenv('PORT', 1000))
     print("Starting app on port %d" % port)
     app.run(debug=False, port=port, host='0.0.0.0', threaded=True)
