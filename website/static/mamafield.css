@@ -25,8 +25,16 @@ body{
 
 }
 #text{
+    display: flex;
+    flex-direction: column;
     animation-duration: 1.5s;
     animation-name: comefromtop;
+    justify-content: center;
+}
+.emom{
+    display: flex;
+    justify-content: center;
+    height: 70%;
 }
 
 @keyframes comefromtop {
@@ -62,33 +70,38 @@ body{
     }
 }
 .emae{
-    margin-left: 7%;
     width: 80%;
     height: 80%;
 }
+.feel{
+    display: flex;
+    justify-content: center;
+}
 h2{
     text-align: center;
-    font-size: 40px;
-    margin-top: 3vh;
+    font-size: 4vh;
+    height: 30%;
+    margin: 2vh;
 }
 .button{
-    position: absolute;
-    top: 37%;
-    left: 50%;
-    transform: translate(-50%, -60%);
     animation-duration: 2s;
     animation-name: buttonfade;
+    display: flex;
+    justify-content: center;
 }
 .btn{
-    padding: 20px;
+    padding: 2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
     text-align: center;
-    font-size: 100%;
+    font-size: 4vh;
     background-color: rgb(247, 175, 187);
-    width: 20vh;
     border-radius: 2vh;
     cursor: pointer;
     border: none;
     overflow: hidden;
+    justify-content: center;
+    width: 100%;
 
 }
 .btn:hover{
@@ -290,12 +303,13 @@ h2{
     overflow:visible;
     transform: translate(500%, 220%);
 }
-@media (max-width: 1500px){
+@media (max-width: 1000px){
     .floatingob{
         display: none;
     }
-    h2{
-        font-size: 3vh;
-        margin-top: 6vh;
+    .h2{
+        font-size: 0.5vh;
     }
+    .emae{
+        width: 100%;
 }
